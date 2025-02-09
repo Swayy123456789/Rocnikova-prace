@@ -1,17 +1,17 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { deleteCar, getCarById } from "../../models/Car";
+import { deleteProduct, getProductById } from "../../models/Product";
 import { useState, useEffect } from "react";
 
-export default function CarView() {
+export default function ProductView() {
   const { id } = useParams();
-  const [car, setCar] = useState();
+  const [product, setProduct] = useState();
   const [isLoaded, setLoaded] = useState(false);
   const [info, setInfo] = useState();
   const [formData, setFormData] = useState();
   const navigate = useNavigate();
 
   const load = async () => {
-    const data = await getCarById(id);
+    const data = await getProductById(id);
     if (data.status === 500 || data.status === 404) return setLoaded(null);
     if (data.status === 200) {
       setCar(data.payload);
@@ -25,16 +25,16 @@ export default function CarView() {
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    if (car.name === formData) {
-      const data = await deleteCar(id);
+    if (product.name === formData) {
+      const data = await deleteProduct(id);
       if (data.status === 200) {
-        alert("Car deleted successfully!");
+        alert("Product deleted successfully!");
         navigate(`/`);
       } else {
         setInfo(data.message);
       }
     } else {
-      setInfo("Špatný vstup");
+      setInfo("Wrong input");
     }
   }
 
@@ -45,7 +45,7 @@ export default function CarView() {
   if (isLoaded === null) {
     return (
       <>
-        <p>Car not found</p>
+        <p>Product not found</p>
       </>
     )
   }
@@ -53,26 +53,28 @@ export default function CarView() {
   if (!isLoaded) {
     return (
       <>
-        <p>Car is loading...</p>
+        <p>Product is loading...</p>
       </>
     )
   }
 
   return (
     <>
-        <h1>Car view</h1>
+        <h1>Product view</h1>
         <p>{id}</p>
-        <p>Název auta {car.name}</p>
-        <p>Značka: {car.brand}</p>
-        <p>Barva: {car.color}</p>
-        <p>Cena: {car.price}</p>
+        <p>Name of the watches: {product.name}</p>
+        <p>Brand: {product.brand}</p>
+        <p>Price: {product.price}</p>
+        <p>Type: {product.type}</p>
+        <p>Strap Material: {product.strapMaterial}</p>
+        <p>Material: {product.material}</p>
         <form>
-          <input type="text" placeholder={car.name} onChange={handleChange} />
-          <button onClick={handleDelete}>Smazat auto</button>
+          <input type="text" placeholder={product.name} onChange={handleChange} />
+          <button onClick={handleDelete}>Delete watches</button>
         </form>
         <p>{info}</p>
-        <Link to={`/update-car/${id}`}>
-          <p>Aktualizovat auto</p>
+        <Link to={`/update-product/${id}`}>
+          <p>Update watches</p>
         </Link>
 
         <Link to={"/"}>

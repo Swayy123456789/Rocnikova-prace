@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getAllCars } from "../../models/Car";
-import CarLink from "./CarLink";
+import { getAllProduct } from "../../models/Product";
+import ProductLink from "./ProductLink";
 
 export default function Home() {
-  const [cars, setCars] = useState();
+  const [product, setProduct] = useState();
   const [isLoaded, setLoaded] = useState(false);
 
   const load = async () => {
-    const data = await getAllCars();
+    const data = await getAllProduct();
     if (data.status === 404 || data.status === 500) return setLoaded(null);
     if (data.status === 200) {
-      setCars(data.payload);
+      setProduct(data.payload);
       setLoaded(true);
     }
   };
@@ -23,7 +23,7 @@ export default function Home() {
   if (isLoaded === null) {
     return (
       <>
-        <p>Cars not found</p>
+        <p>Products not found</p>
       </>
     )
   }
@@ -39,10 +39,10 @@ export default function Home() {
   if (isLoaded) {
     return (
       <>
-        <h1>Car list</h1>
+        <h1>Product list</h1>
         {
-          cars.map((car, index) => (
-            <CarLink key={index} {...car} />
+          product.map((product, index) => (
+            <ProductLink key={index} {...product} />
           ))
         }
 

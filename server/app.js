@@ -6,13 +6,13 @@ const logger = require('morgan')
 const cors = require("cors");
 const mongoose = require("mongoose");
 mongoose
-.connect(`mongodb+srv://admin:adminadmin@cluster0.nrqdm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
-.then(() => console.log("Database connected"))
-.catch(() => console.log("chzba"))
+.connect(`mongodb+srv://admin:adminadmin@cluster0.4ixx5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+.then(() => console.log("Database ano prosím"))
+.catch(() => console.log("chyba"))
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const carsRouter = require('./routes/cars');
+const productRouter = require('./routes/product');
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/cars', carsRouter);
+app.use('/product', productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
