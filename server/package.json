@@ -1,9 +1,10 @@
 {
-  "name": "expresscars",
+  "name": "expresswatches",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "dev": "vite"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

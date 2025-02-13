@@ -10,13 +10,13 @@ export default function Home() {
     <header>
       <img class="logo" src="" alt="logo"></img>
       <nav>
-        <ul class="nav_links">
-          <li><a href="#"/>Products</li>
-          <li><a href="#"/>Contact</li>
-          <li><a href="#"/>About us</li>
+        <ul class="nav__links">
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About us</a></li>
         </ul>
       </nav>
-      <a class="cta" href="#">Admin mode</a>
+      <a class="cta" href="#"><button>Admin mode</button></a>
     </header>
         <Link to={"/add-product"}>
             <p>Add product</p>
