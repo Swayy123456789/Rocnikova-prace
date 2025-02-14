@@ -4,8 +4,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(44, 41, 41);
 }
+
+
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -20,6 +21,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
+    background-color: rgb(44, 41, 41);
+    width: 100vw;
 }
 
 .logo {
@@ -45,7 +48,8 @@ header {
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: rgb(255, 255, 255);
+    color: black;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -54,4 +58,5 @@ button {
 
 button:hover {
     background-color: black;
+    color: aliceblue;
 }

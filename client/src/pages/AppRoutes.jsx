@@ -5,6 +5,7 @@ import ProductCreateForm from "./ProductCreateForm";
 import ProductList from "./ProductList";
 import ProductView from "./ProductView";
 import ProductUpdateForm from "./ProductUpdateForm";
+import Admin from "./Admin/admin";
 
 export default function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/admin" element={<Admin/>}/>
                 <Route path="/add-product" element={<ProductCreateForm/>}/>
                 <Route path="/view-product" element={<ProductList/>}/>
                 <Route path="/product/:id" element={<ProductView/>}/>
