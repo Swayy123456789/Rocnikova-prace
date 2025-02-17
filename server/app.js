@@ -7,12 +7,15 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 mongoose
 .connect(`mongodb+srv://admin:adminadmin@cluster0.4ixx5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
-.then(() => console.log("Database ano prosím"))
+.then(() => console.log("Database facha bracho"))
 .catch(() => console.log("chyba"))
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
+const contactRouter = require('./routes/contact');
+const aboutRouter = require('./routes/about');
+const adminRouter = require('./routes/admin');
 
 const app = express();
 
@@ -30,6 +33,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
+app.use('/contact', contactRouter);
+app.use('/about', aboutRouter);
+app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

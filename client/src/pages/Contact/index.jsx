@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
-import s from "./Header.module.css"
+import Header from "../../components/Header/index";
+
 
 import React from 'react'
 
-export default function index() {
+export default function Contact() {
   return (
-    <div>index</div>
+    <>
+    <Header />
+    <h1>Contact us</h1>
+    </>
   )
 }
