@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <Header />
-      <img className="img" src="../../../img/raycast-logo.png" alt="img"></img>
+     
     </>
   )
 }
