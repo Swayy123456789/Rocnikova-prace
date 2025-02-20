@@ -11,13 +11,13 @@ export default function Header() {
           <nav>
             <ul className={s.nav__links}>
               <li>
-                <a href="product">Products</a>
+                <a href="product">Produkty</a>
               </li>
               <li>
-                <a href="contact">Contact</a>
+                <a href="contact">Kontakt</a>
               </li>
               <li>
-                <a href="about">About us</a>
+                <a href="about">O nás</a>
               </li>
             </ul>
           </nav>
