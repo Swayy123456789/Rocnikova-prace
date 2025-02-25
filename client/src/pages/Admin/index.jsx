@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/index";
-import s from "./Admin.module.css"
+
 
 import React from 'react'
 
