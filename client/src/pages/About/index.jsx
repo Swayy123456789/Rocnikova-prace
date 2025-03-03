@@ -9,20 +9,26 @@ export default function About() {
     <>
     
     <Header />
+    <br></br>
+    <br></br>
 
-
-    <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
+    <section className="backdrop-blur-lg p-7 bg-opacity-40">
+        <div className="container mx-auto px-5 bg-clip-padding">
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold text-gray-800">O nás</h1>
-                <p className="mt-4 text-lg text-gray-600">Jsme váš spolehlivý partner pro kvalitní hodinky. Nabízíme široký výběr elegantních a moderních časoměřičů pro každou příležitost.</p>
+                <h1 className="text-4xl font-bold text-white">O naší firmě</h1>
+                <br></br>
+                <p className="mt-4 text-lg text-white justify-center">Jsme váš spolehlivý partner pro kvalitní hodinky. Nabízíme široký výběr elegantních a moderních časoměřičů pro každou příležitost.</p>
+                <br></br>
+                <br></br>
+                <br></br>
+                
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-semibold text-gray-800">Kdo jsme?</h2>
-                    <p className="text-lg text-gray-700">Naše vášeň pro hodinky nás vedla k vytvoření této online platformy, kde můžete najít nejlepší kousky od renomovaných značek. Naším cílem je nabídnout vám nejen krásný design, ale i špičkovou kvalitu a funkčnost. Naší vizí je, aby každý, kdo navštíví náš eshop, našel hodinky, které dokonale ladí s jeho osobností.</p>
-                    <p className="text-lg text-gray-700">Věříme v individuální přístup, a proto se snažíme každému zákazníkovi poskytnout tu nejlepší zkušenost s nákupem, ať už hledáte hodinky pro sebe, nebo jako dárek pro své blízké.</p>
+                    <h2 className="text-3xl font-semibold text-white">Kdo jsme?</h2>
+                    <p className="text-lg text-white">Naše vášeň pro hodinky nás vedla k vytvoření této online platformy, kde můžete najít nejlepší kousky od renomovaných značek. Naším cílem je nabídnout vám nejen krásný design, ale i špičkovou kvalitu a funkčnost. Naší vizí je, aby každý, kdo navštíví náš eshop, našel hodinky, které dokonale ladí s jeho osobností.</p>
+                    <p className="text-lg text-white">Věříme v individuální přístup, a proto se snažíme každému zákazníkovi poskytnout tu nejlepší zkušenost s nákupem, ať už hledáte hodinky pro sebe, nebo jako dárek pro své blízké.</p>
                 </div>
 
                 
@@ -36,7 +42,7 @@ export default function About() {
             </div>
 
             <div className="mt-12 text-center">
-                <h2 className="text-3xl font-semibold text-gray-800">Proč si vybrat nás?</h2>
+                <h2 className="text-3xl font-semibold text-white">Proč si vybrat nás?</h2>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="flex items-center space-x-4">
                         <div className="bg-blue-500 text-white p-4 rounded-full">
