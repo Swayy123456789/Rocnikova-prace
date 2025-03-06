@@ -1,7 +1,7 @@
 
 
 export const getAllProduct = async () => {
-    const req = await fetch("http://localhost:3000/product", {
+    const req = await fetch("http://localhost:3000/products", {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"

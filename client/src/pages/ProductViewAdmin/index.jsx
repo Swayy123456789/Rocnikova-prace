@@ -2,7 +2,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { deleteProduct, getProductById } from "../../models/Product";
 import { useState, useEffect } from "react";
 
-export default function ProductView() {
+export default function ProductViewAdmin() {
   const { id } = useParams();
   const [product, setProduct] = useState();
   const [isLoaded, setLoaded] = useState(false);
@@ -60,8 +60,8 @@ export default function ProductView() {
 
   return (
     <>
-      <div style={{backgroundColor: "white"}}>
-        <h1>Product view</h1>
+      <div style={{ backgroundColor: "white", padding: "5em"}}>
+        <h1>Admin Product view</h1>
         <p>{id}</p>
         <p>Name of the watches: {product.name}</p>
         <p>Brand: {product.brand}</p>
@@ -69,6 +69,18 @@ export default function ProductView() {
         <p>Type: {product.type}</p>
         <p>Strap Material: {product.strapMaterial}</p>
         <p>Material: {product.material}</p>
+        <form>
+          <input
+            type="text"
+            placeholder={product.name}
+            onChange={handleChange}
+          />
+          <button onClick={handleDelete}>Delete watches</button>
+        </form>
+        <p>{info}</p>
+        <Link to={`/update-product/${id}`}>
+          <p>Update watches</p>
+        </Link>
 
         <Link to={"/"}>
           <p>Go home</p>

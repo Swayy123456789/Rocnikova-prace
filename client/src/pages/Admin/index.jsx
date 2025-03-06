@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/index";
-
-
 import React from 'react'
+import ProductListAdmin from "../ProductListAdmin";
 
 export default function Admin() {
   return (
@@ -16,6 +15,7 @@ export default function Admin() {
         <Link to={"/view-product"}>
             <p>View product</p>
         </Link>
+        <ProductListAdmin></ProductListAdmin>
     </>
   )
 }

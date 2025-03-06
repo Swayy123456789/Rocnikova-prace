@@ -12,7 +12,7 @@ mongoose
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const productRouter = require('./routes/product');
+const productsRouter = require('./routes/products');
 
 
 const app = express();
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product', productRouter);
+app.use('/products', productsRouter);
 
 
 // catch 404 and forward to error handler

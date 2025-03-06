@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <>
     <motion.navbar
-     variants={FadeLeft(1)}
+     variants={FadeLeft(0.5)}
      initial="hidden"
      animate="visible">
       <header>
@@ -18,22 +18,27 @@ export default function Header() {
           <nav>
             <ul className={s.nav__links}>
               <li>
-                <a href="product">Products</a>
+                <Link to={"/products"}>
+                  <a>Products</a>
+                </Link>
               </li>
               <li>
-                <a href="contact">Contact</a>
+              <Link to={"/contact"}>
+                <a>Contact</a>
+                </Link>
               </li>
               <li>
-                <a href="about">About</a>
+              <Link to={"/about"}>
+                <a>About</a>
+                </Link>
               </li>
             </ul>
           </nav>
-          <a className="cta" href="admin">
-            <button>Admin panel</button>
-          </a>
+          
         </div>
       </header>
       </motion.navbar>
+
       
     </>
   );

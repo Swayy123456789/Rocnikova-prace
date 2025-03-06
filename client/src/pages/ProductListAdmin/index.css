@@ -1,0 +1,10 @@
+.productLinkAdminBtn {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.productLinkAdminBtn:hover {
+  font-weight: bold;
+  outline: none;
+  border: none;
+}

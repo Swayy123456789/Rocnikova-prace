@@ -83,19 +83,3 @@ li, a, button {
 .nav__links li a:hover {
     color: rgb(161, 166, 255);
 }
-
-button {
-    padding: 9px 25px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover {
-    background-color: black;
-    color: aliceblue;
-    
-}

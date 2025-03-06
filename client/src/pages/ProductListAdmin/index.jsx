@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getAllProduct } from "../../models/Product";
-import ProductLink from "./ProductLink";
-import Header from "../../components/Header";
-import { Card } from "@mui/material";
-import OutlinedCard from "../../components/Card/Card";
+import ProductLinkAdmin from "./ProductLink";
 
 
-export default function ProductList() {
-  
+export default function ProductListAdmin() {
   const [product, setProduct] = useState();
   const [isLoaded, setLoaded] = useState(false);
 
@@ -44,18 +40,16 @@ export default function ProductList() {
   if (isLoaded) {
     return (
       <>
-      <Header />
         <h1>Product list</h1>
         {
-          product.map((products, index) => (
-            <ProductLink key={index} {...products} />
+          product.map((product, index) => (
+            <ProductLinkAdmin key={index} {...product} />
           ))
         }
 
         <Link to={"/"}>
           <p>Go home</p>
         </Link>
-        <OutlinedCard />
       </>
     )
   }

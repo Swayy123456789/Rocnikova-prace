@@ -9,6 +9,7 @@ import ProductCreateForm from "./ProductCreateForm";
 import ProductList from "./ProductList";
 import ProductView from "./ProductView";
 import ProductUpdateForm from "./ProductUpdateForm";
+import ProductViewAdmin from "./ProductViewAdmin";
 
 
 
@@ -19,13 +20,13 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/" element={<Home/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/add-product" element={<ProductCreateForm/>}/>
-                <Route path="/view-product" element={<ProductList/>}/>
                 <Route path="/product/:id" element={<ProductView/>}/>
+                <Route path="/admin/product/:id" element={<ProductViewAdmin/>}/>
+                <Route path="/products" element={<ProductList/>}/>
                 <Route path="/update-product/:id" element={<ProductUpdateForm/>}/>
             </Routes>
         </BrowserRouter>

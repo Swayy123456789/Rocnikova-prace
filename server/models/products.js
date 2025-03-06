@@ -9,4 +9,4 @@ const schema = mongoose.Schema({
     material: {type: String, required: true},
 });
 
-module.exports = mongoose.model("Product", schema);
+module.exports = mongoose.model("Products", schema);
