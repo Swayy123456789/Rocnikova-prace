@@ -1,6 +1,7 @@
 body {
     background-image: url("../../../img/loupe-mono-dark.png");
     background-repeat: no-repeat;
+    height: 1800px;
     background-size: cover;
     background-attachment: fixed;
     background-position-x: center;

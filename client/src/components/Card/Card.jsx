@@ -40,7 +40,7 @@ const card = (
 export default function OutlinedCard() {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-      <Card variant="outlined" sx={{ marginRight: 30, marginBottom: 2 }}>{card}</Card>
+      <Card variant="outlined" sx={{ marginRight: 30, marginBottom: 2}}>{card}</Card>
       <Card variant="outlined" sx={{ marginRight: 30, marginBottom: 2 }}>{card}</Card>
       <Card variant="outlined" sx={{ marginRight: 2, marginBottom: 2 }}>{card}</Card>
 
