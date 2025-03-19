@@ -1,5 +1,6 @@
 
 import Header from "../../components/Header/index";
+import Footer from "../../components/Footer/Footer";
 
 
 import React from 'react'
@@ -7,12 +8,13 @@ import React from 'react'
 export default function About() {
   return (
     <>
-    
     <Header />
+    
+    
     <br></br>
     
 
-    <section className="backdrop-blur-lg p-7 bg-opacity-40 scale-100">
+    <section className="backdrop-blur-lg p-7 bg-opacity-40 scale-100 min-h-screen">
       <div className="container mx-auto px-5 bg-clip-padding">
         <div className="text-center mb-12">
             <br></br>
@@ -31,9 +33,9 @@ export default function About() {
           <br />
         </div>
 
-        {/* Sekce Kdo jsme a obrázek */}
+        
         <div className="flex flex-col items-center justify-center space-y-12">
-          {/* Text - Kdo jsme? */}
+          
           <div className="text-center max-w-4xl px-2">
             <h2 className="text-4xl font-semibold text-white">Who are we?</h2>
             <br></br>
@@ -57,7 +59,7 @@ export default function About() {
           <br></br>
           
 
-          {/* Obrázek s textem */}
+          
           <div className="relative max-w-3xl w-full">
             <img
               src="https://blog.crownandcaliber.com/wp-content/uploads/2015/03/CC-x-GQ-6355.jpg"
@@ -79,7 +81,7 @@ export default function About() {
         <br></br>
         
 
-        {/* Sekce - Proč si vybrat nás? */}
+        
         <div className="mt-12 text-center">
           <h2 className="text-5xl font-semibold text-white left-20">Why choose us?</h2>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -174,7 +176,8 @@ export default function About() {
       </div>
     </section>
 
-
+    
+    <Footer />
     </>
   )
 }

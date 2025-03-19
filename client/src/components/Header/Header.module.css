@@ -30,8 +30,8 @@ li, a, button {
 
 .outline {
     margin-top: 28px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     height: fit-content;

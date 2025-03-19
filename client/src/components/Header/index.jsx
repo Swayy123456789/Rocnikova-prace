@@ -8,10 +8,12 @@ import { motion } from "framer-motion";
 export default function Header() {
   return (
     <>
+    
     <motion.navbar
      variants={FadeLeft(0.5)}
      initial="hidden"
      animate="visible">
+      <section className='container !mx-auto'>
       <header>
         <div className={s.outline}>
           <Link to={"/"}><img className={s.logo} src="../img/logo.png" alt="logo"></img></Link>
@@ -37,6 +39,7 @@ export default function Header() {
           
         </div>
       </header>
+      </section>
       </motion.navbar>
 
       
