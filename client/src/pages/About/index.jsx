@@ -10,16 +10,11 @@ export default function About() {
     <>
     <Header />
     
-    
-    <br></br>
-    
 
-    <section className="backdrop-blur-lg p-7 bg-opacity-40 scale-100 min-h-screen">
-      <div className="container mx-auto px-5 bg-clip-padding">
-        <div className="text-center mb-12">
-            <br></br>
-            <br></br>
-            <br></br>
+    <section className="backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-md !my-8">
+      <div className="container !mx-auto px-5 bg-clip-padding !py-17">
+        <div className="text-center !mb-1">
+            
           <h1 className="text-4xl font-bold text-white">About us</h1>
           <br />
           <p className="mt-4 text-lg text-white justify-center max-w-450 center">
@@ -34,14 +29,13 @@ export default function About() {
         </div>
 
         
-        <div className="flex flex-col items-center justify-center space-y-12">
+        <div className="flex flex-col items-center justify-center !space-y-30">
           
-          <div className="text-center max-w-4xl px-2">
-            <h2 className="text-4xl font-semibold text-white">Who are we?</h2>
-            <br></br>
+          <div className="max-w-4xl !px-2 !mx-">
+            <h2 className="text-4xl font-semibold text-white !mx-4">Who are we?</h2>
             
             
-            <p className="text-lg text-white mt-4">
+            <p className="text-lg text-white !mt-9">
             Our passion for watches led us to create this online platform where you can find the best pieces from renowned brands. 
             Our goal is to offer you not only beautiful designs but also top-notch quality and functionality. 
             Our vision is for everyone who visits our online store to find the perfect watch that matches their personality.
@@ -51,14 +45,6 @@ export default function About() {
             whether you're looking for a watch for yourself or as a gift for your loved ones.
             </p>
           </div>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          
-
           
           <div className="relative max-w-3xl w-full">
             <img
