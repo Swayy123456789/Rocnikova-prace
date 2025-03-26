@@ -11,28 +11,27 @@ export default function About() {
     <Header />
     
 
-    <section className="backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-md !my-8">
+    <section className="backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-lg !my-12">
       <div className="container !mx-auto px-5 bg-clip-padding !py-17">
         <div className="text-center !mb-1">
             
           <h1 className="text-4xl font-bold text-white">About us</h1>
           <br />
-          <p className="mt-4 text-lg text-white justify-center max-w-450 center">
+          <p className="!mt-5 text-lg text-white justify-center max-w-450 center">
           We are your reliable partner for quality watches. We offer a wide selection of 
           elegant and modern timepieces for every occasion.
           </p>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          
         </div>
 
         
-        <div className="flex flex-col items-center justify-center !space-y-30">
+        <div className="flex flex-col items-center justify-center !space-y-30 !mt-29">
           
-          <div className="max-w-4xl !px-2 !mx-">
-            <h2 className="text-4xl font-semibold text-white !mx-4">Who are we?</h2>
+
+        <div className="text-4xl font-semibold text-white !mr-270 !mt-22"> 
+            <h2 className="text-5xl">Who are we?</h2>
+            </div>
+          <div className="max-w-4xl !px-2 !ml-110 !-mt-62">
             
             
             <p className="text-lg text-white !mt-9">
@@ -46,7 +45,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="relative max-w-3xl w-full">
+          <div className="relative max-w-3xl w-full !mt-18">
             <img
               src="https://blog.crownandcaliber.com/wp-content/uploads/2015/03/CC-x-GQ-6355.jpg"
               alt="Hodinky"
@@ -60,17 +59,13 @@ export default function About() {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        
         
 
         
-        <div className="mt-12 text-center">
-          <h2 className="text-5xl font-semibold text-white left-20">Why choose us?</h2>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="!mt-57 text-center !mb-20">
+          <h2 className="text-5xl font-semibold text-white">Why choose us?</h2>
+          <div className="!mt-38 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex items-center space-x-4">
               <div className="bg-blue-500 text-white p-4 rounded-full">
                 <svg
@@ -88,17 +83,7 @@ export default function About() {
                   ></path>
                 </svg>
               </div>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
+              
              
               <div className="!mr-1 ">
                 <h3 className="text-2xl font-semibold text-white">Quality watches</h3>
@@ -160,9 +145,9 @@ export default function About() {
           </div>
         </div>
       </div>
+      
     </section>
 
-    
     <Footer />
     </>
   )
