@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/Footer";
+import MiniMap from "../../components/MiniMap/MiniMap";
 
 
 
@@ -31,15 +32,12 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <section className="max-w-6xl mx-auto px-6 py-12 text-white">
-        <h2 className="text-4xl font-semibold text-center text-gray-200 mb-10">
-          Kontaktujte nás
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Kontaktní formulář */}
-          <div className="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-700">
-            <h3 className="text-xl font-medium text-gray-300 mb-6">
+      <section className="max-w-6xl !px-6 !py-12 text-white !mx-auto">
+        
+        <div className="!grid !grid-cols-1 !md:grid-cols-2 !gap-8">
+          {/* Formulář */}
+          <div className="backdrop-blur-lg bg-opacity-40 p-8 rounded-lg shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white !mb-6 !py-4 text-center">
               Máte dotaz? Napište nám!
             </h3>
 
@@ -137,35 +135,36 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Kontaktní údaje */}
+          {/* Kontakt. údaje */}
           <div className="bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-700">
             <h3 className="text-xl font-medium text-gray-300 mb-6">
               Kontaktní údaje
             </h3>
             <div className="mb-4">
-              <p className="font-semibold text-gray-300">Telefon</p>
-              <p className="text-gray-400">+420 123 456 789</p>
+              <p className="font-bold text-gray-300">Telefon</p>
+              <p className="text-gray-400">+420 735 847 770</p>
             </div>
 
             <div className="mb-4">
-              <p className="font-semibold text-gray-300">E-mail</p>
-              <p className="text-gray-400">podpora@tvujeshop.cz</p>
+              <p className="font-bold text-gray-300">E-mail</p>
+              <p className="text-gray-400">watchtime@seznam.cz</p>
             </div>
 
             <div className="mb-4">
-              <p className="font-semibold text-gray-300">
+              <p className="font-bold text-gray-300">
                 Adresa pro vrácení zboží
               </p>
-              <p className="text-gray-400">Ulice 123, 100 00 Praha</p>
+              <p className="text-gray-400">Pařížská, 110 00 Praha 1</p>
             </div>
 
-            <div className="mb-4">
-              <p className="font-semibold text-gray-300">Otevírací doba</p>
-              <p className="text-gray-400">Pondělí - Pátek: 9:00 - 18:00</p>
+            <div className="!mb-4">
+              <p className="font-bold text-gray-300">Otevírací doba</p>
+              <p className="text-gray-400">Pondělí - Pátek: 10:00 - 18:00</p>
+              <p className="text-gray-400">Sobota - Neděle: Zavřeno</p>
             </div>
 
             <div>
-              <p className="font-semibold text-gray-300 mb-2">
+              <p className="font-bold text-gray-300 !mb-20">
                 Sledujte nás na sociálních sítích
               </p>
               <div className="flex space-x-4">
@@ -186,6 +185,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <MiniMap />
       <Footer />
     </>
   );

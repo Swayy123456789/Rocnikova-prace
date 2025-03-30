@@ -45,16 +45,14 @@ export default function ProductList() {
     return (
       <>
       <Header />
-        <h1>Product list</h1>
+        <h1 className="text-center !my-10 font-bold">Our products</h1>
         {
           product.map((products, index) => (
             <ProductLink key={index} {...products} />
           ))
         }
 
-        <Link to={"/"}>
-          <p>Go home</p>
-        </Link>
+        
         <OutlinedCard />
       </>
     )

@@ -40,7 +40,9 @@ export default function ProductListAdmin() {
   if (isLoaded) {
     return (
       <>
-        <h1>Product list</h1>
+      <section className="!mx-350">
+        <h1 className="!font-bold">Product list</h1>
+        
         {
           product.map((product, index) => (
             <ProductLinkAdmin key={index} {...product} />
@@ -50,6 +52,7 @@ export default function ProductListAdmin() {
         <Link to={"/"}>
           <p>Go home</p>
         </Link>
+        </section>
       </>
     )
   }
