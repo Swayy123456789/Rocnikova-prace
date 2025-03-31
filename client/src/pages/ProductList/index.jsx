@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { getAllProduct } from "../../models/Product";
 import ProductLink from "./ProductLink";
@@ -45,7 +46,7 @@ export default function ProductList() {
     return (
       <>
       <Header />
-        <h1 className="text-center !my-10 font-bold">Our products</h1>
+       
         {
           product.map((products, index) => (
             <ProductLink key={index} {...products} />
@@ -54,6 +55,10 @@ export default function ProductList() {
 
         
         <OutlinedCard />
+
+
+
+        <Footer />
       </>
     )
   }

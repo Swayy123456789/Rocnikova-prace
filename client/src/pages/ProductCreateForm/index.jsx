@@ -28,7 +28,7 @@ export default function ProductCreateForm() {
 
   return (
     <>
-      <div style={{backgroundColor: "white"}}>
+      <div style={{backgroundColor: "black"}}>
         <h1>Create product</h1>
         <form>
           <input

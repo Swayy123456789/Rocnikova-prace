@@ -13,7 +13,7 @@ export default function Header() {
      variants={FadeLeft(0.5)}
      initial="hidden"
      animate="visible">
-      <section className='container !mx-auto'>
+      <section className='!container !mx-auto !max-w-260'>
       <header>
         <div className={s.outline}>
           <Link to={"/"}><img className={s.logo} src="../img/logo.png" alt="logo"></img></Link>

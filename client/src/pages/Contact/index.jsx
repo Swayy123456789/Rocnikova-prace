@@ -103,11 +103,11 @@ export default function Contact() {
                     onChange={handleChange}
                     className="!w-full !px-4 !py-2 !mt-2 backdrop-blur-lg bg-opacity-40 text-white border border-gray-500 rounded-md !focus:ring-2 focus:ring-indigo-500 !outline-none"
                   >
-                    <option value="">Vyberte předmět</option>
-                    <option value="Dotaz na produkt">Dotaz na produkt</option>
-                    <option value="Reklamace">Reklamace</option>
-                    <option value="Vrácení zboží">Vrácení zboží</option>
-                    <option value="Obecný dotaz">Obecný dotaz</option>
+                    <option className="text-black" value="">Vyberte předmět</option>
+                    <option className="text-black" value="Dotaz na produkt">Dotaz na produkt</option>
+                    <option className="text-black" value="Reklamace">Reklamace</option>
+                    <option className="text-black" value="Vrácení zboží">Vrácení zboží</option>
+                    <option className="text-black" value="Obecný dotaz">Obecný dotaz</option>
                   </select>
                 </div>
 
@@ -131,7 +131,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="!w-full !py-4 !px-4 bg-indigo-600 text-white rounded-md !hover:bg-white focus:outline-none focus:ring-2 !focus:ring-white"
+                  className="!w-full !py-4 !px-4 !bg-indigo-500 text-white rounded-md !hover:bg-white focus:outline-none focus:ring-2 !focus:ring-white"
                 >
                   Odeslat zprávu
                 </button>
