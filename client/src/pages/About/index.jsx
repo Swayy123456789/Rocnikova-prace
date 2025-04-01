@@ -11,7 +11,7 @@ export default function About() {
     <Header />
     
 
-    <section className="backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-lg !my-12">
+    <section className="container backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-lg !my-12">
       <div className="container !mx-auto px-5 bg-clip-padding !py-17">
         <div className="text-center !mb-1">
             
@@ -24,15 +24,15 @@ export default function About() {
           
         </div>
 
-        
+
         <div className="flex flex-col items-center justify-center !space-y-30 !mt-29">
           
-
-        <div className="text-4xl font-semibold text-white !mr-270 !mt-22"> 
+        <div className="text-4xl font-bold text-white !mr-270 !mt-22"> 
             <h2 className="text-5xl">Who are we?</h2>
             </div>
+
+
           <div className="max-w-4xl !px-2 !ml-110 !-mt-62">
-            
             
             <p className="text-lg text-white !mt-9">
             Our passion for watches led us to create this online platform where you can find the best pieces from renowned brands. 

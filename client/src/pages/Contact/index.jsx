@@ -42,7 +42,7 @@ export default function Contact() {
           {/* Formulář */}
           <div className="backdrop-blur-lg bg-opacity-40 !p-8 rounded-lg shadow-lg border border-white ">
             <h3 className="text-xl font-bold text-white !mb-6 !py-4 text-center">
-              Máte dotaz? Napište nám!
+              Máte dotaz? Neváhejte a napište nám!
             </h3>
 
             {isSubmitted ? (

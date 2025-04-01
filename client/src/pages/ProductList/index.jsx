@@ -46,17 +46,14 @@ export default function ProductList() {
     return (
       <>
       <Header />
-       
+       <div className="container flex !mx-auto justify-between grid-cols-3 !my-30">
         {
           product.map((products, index) => (
-            <ProductLink key={index} {...products} />
+            //<ProductLink key={index} {...products} />
+            <OutlinedCard key={index} product={products} />
           ))
         }
-
-        
-        <OutlinedCard />
-
-
+</div>
 
         <Footer />
       </>
