@@ -60,7 +60,7 @@ export default function ProductView() {
 
   return (
     <>
-      <div style={{backgroundColor: "white"}}>
+      <div style={{backgroundColor: "black"}}>
         <h1>Product view</h1>
         <p>{id}</p>
         <p>Name of the watches: {product.name}</p>

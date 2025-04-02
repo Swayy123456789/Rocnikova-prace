@@ -9,13 +9,13 @@ export default function Admin() {
   return (
     <>
         <section className="p-7 !text-center">
-        <div className="!my-25 font-bold text-center">
-        <h1 className="!my-20">Admin panel</h1>
+        <div className="!my-10 font-bold">
+        <h1 className="!my-10">Admin panel</h1>
         <Link to={"/add-product"}>
-            <p>Add product <CirclePlus className="!mx-57 !-my-6" /> </p>  
+            <p>Add product <CirclePlus className="!mx-260 !-my-6" /> </p>  
         </Link>
         <Link to={"/view-product"}>
-            <p className="!my-19">View product <Info className="!mx-57 !-my-6"/></p>
+            <p className="!my-19">View product <Info className="!mx-260 !-my-6"/></p>
         </Link>
          </div>
         </section>

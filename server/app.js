@@ -5,10 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan')
 const cors = require("cors");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
+const PORT = 3000;
+
 mongoose
 .connect(`mongodb+srv://admin:adminadmin@cluster0.4ixx5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 .then(() => console.log("Database facha bracho"))
-.catch(() => console.log("chyba"))
+.catch((err) => console.log(err))
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');

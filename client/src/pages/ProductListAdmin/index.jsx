@@ -40,7 +40,7 @@ export default function ProductListAdmin() {
   if (isLoaded) {
     return (
       <>
-      <section className="container">
+      <section className="text-center w-full">
         <h1 className="font-bold">Product list</h1>
         
         {
