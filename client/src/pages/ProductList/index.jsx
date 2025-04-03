@@ -53,7 +53,7 @@ export default function ProductList() {
             <OutlinedCard key={index} product={products} />
           ))
         }
-</div>
+      </div>
 
         <Footer />
       </>

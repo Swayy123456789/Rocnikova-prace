@@ -7,6 +7,7 @@ const schema = mongoose.Schema({
     type: {type: String, required: true},
     strapMaterial: {type: String, required: true},
     material: {type: String, required: true},
+    imagePath: {type: String, required: true}
 });
 
 module.exports = mongoose.model("Products", schema);

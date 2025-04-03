@@ -63,6 +63,7 @@ export default function ProductView() {
       <div style={{backgroundColor: "black"}}>
         <h1>Product view</h1>
         <p>{id}</p>
+        <img src={product.imagePath} alt="" />
         <p>Name of the watches: {product.name}</p>
         <p>Brand: {product.brand}</p>
         <p>Price: {product.price}</p>
