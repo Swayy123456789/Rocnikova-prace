@@ -1,6 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { updateProduct, getProductById } from "../../models/Product";
+import { createUpdate } from "../../models/Uploads";
 
 export default function ProductUpdateForm() {
   const { id } = useParams();
@@ -10,6 +11,10 @@ export default function ProductUpdateForm() {
   const [ formData, setFormData ] = useState();
   const navigate = useNavigate();
 
+  const handleImageChange = (e) => {
+    setFormData({ ...formData, imgFile: e.target.files[0] });
+  };
+
   const load = async () => {
     const data = await getProductById(id);
     if (data.status === 500 || data.status === 404) return setLoaded(null);
@@ -18,6 +23,18 @@ export default function ProductUpdateForm() {
       setLoaded(true);
     }
   };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    const formDataToSend = new FormData();
+    for (const [key, value] of Object.entries(formData)) {
+        formDataToSend.append(key, value);
+      }
+      console.log(Array.from(formDataToSend.entries()));
+      const update = await createUpdate(formDataToSend);
+      if (update.status === 201) return navigate("/products");
+      setInfo(update.msg);
+    }
 
   const updateForm = async () => {
     const data = await updateProduct(id, formData);
@@ -56,19 +73,74 @@ export default function ProductUpdateForm() {
 
   return (
     <>
-      <h1>Product update form</h1>
-      <p>{id}</p>
-      <form>
-      <input type="text" name="name" required placeholder="Enter name" onChange={handleChange} defaultValue={product.name}/>
-        <input type="text" name="brand" required placeholder="Enter brand" onChange={handleChange} defaultValue={product.brand}/>
-        <input type="number" name="price" required placeholder="Enter price" onChange={handleChange} defaultValue={product.price}/>
-        <input type="text" name="type" required placeholder="Enter type" onChange={handleChange} defaultValue={product.type}/>
-        <input type="text" name="strap material" required placeholder="Enter strap material" onChange={handleChange} defaultValue={product.strapMaterial}/>
-        <input type="text" name="material" required placeholder="Enter price" onChange={handleChange} defaultValue={product.material}/>
-        <button onClick={handleUpdate}>
-          Update product
-        </button>
+      <div className="bg-black text-center font-bold">
+        <h1>Update product</h1>
+
+        <form className="items-center" encType="multipart/form-data">
+        <input type="text" name="imgName" placeholder="Enter image name" onChange={handleChange} />
+        
+        <input
+            type="text"
+            name="name"
+            required
+            placeholder="Enter name"
+            onChange={handleChange}
+          />
+
+        <input
+            type="number"
+            name="price"
+            required
+            placeholder="Enter price"
+            onChange={handleChange}
+          />
+
+        <input
+            type="text"
+            name="brand"
+            required
+            placeholder="Enter brand"
+            onChange={handleChange}
+          />
+
+        <input
+            type="text"
+            name="type"
+            required
+            placeholder="Type"
+            onChange={handleChange}
+          />
+
+        <input
+            type="text"
+            name="material"
+            required
+            placeholder="Enter material"
+            onChange={handleChange}
+          />
+
+        <input
+            type="text"
+            name="strapMaterial"
+            required
+            placeholder="Enter strap material"
+            onChange={handleChange}
+          />
+
+        
+
+        
+        <input type="file" name="imgFile" onChange={handleImageChange}/>
+
+        <button className="!bg-black"><input type="submit" value="Update product" onClick={submit}/></button>
+
       </form>
+        
+        <p>{info}</p>
+        <Link to={"/"}>
+          <p>Go back</p>
+        </Link>
+      </div>
     </>
   )
 }

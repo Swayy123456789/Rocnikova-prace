@@ -44,7 +44,7 @@ export default function ProductCreateForm() {
 
   return (
     <>
-      <div style={{backgroundColor: "black"}}>
+      <div className="bg-black items-center font-bold">
         <h1>Create product</h1>
 
         <form encType="multipart/form-data">
@@ -78,7 +78,15 @@ export default function ProductCreateForm() {
             type="text"
             name="type"
             required
-            placeholder="Qwartz/not"
+            placeholder="Type"
+            onChange={handleChange}
+          />
+
+        <input
+            type="text"
+            name="material"
+            required
+            placeholder="Enter material"
             onChange={handleChange}
           />
 
@@ -90,13 +98,7 @@ export default function ProductCreateForm() {
             onChange={handleChange}
           />
 
-        <input
-            type="text"
-            name="material"
-            required
-            placeholder="Enter material"
-            onChange={handleChange}
-          />
+        
 
         
         <input type="file" name="imgFile" onChange={handleImageChange}/>

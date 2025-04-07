@@ -12,9 +12,9 @@ export default function MediaCard({ product }) {
   return (
     <>
       <Link to={`/product/${product._id}`}>
-        <Card sx={{ maxWidth: 290 }} className="!w-full">
+        <Card sx={{ width: 200 }} className="!w-full">
           <CardMedia
-            sx={{ height: 90 }}
+            sx={{ height: 150 }}
             image={product.imagePath}
             title={product.brand}
           />

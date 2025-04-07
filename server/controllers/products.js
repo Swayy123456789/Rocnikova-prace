@@ -67,8 +67,8 @@ exports.updateProduct = async (req, res, next) => {
       brand: req.body.brand,
       price: req.body.price,
       type: req.body.type,
-      strapMaterial: req.body.strapMaterial,
       material: req.body.material,
+      strapMaterial: req.body.strapMaterial
     };
     const result = await Product.findByIdAndUpdate(req.params.id, data);
     if (result) {
@@ -122,10 +122,11 @@ const saveIntoDb = async (req, res) => {
       brand: req.body.brand,
       price: req.body.price,
       type: req.body.type,
-      strapMaterial: req.body.strapMaterial,
       material: req.body.material,
+      strapMaterial: req.body.strapMaterial,
       imagePath: "http://localhost:3000/img/" + req.file.filename,
     });
+    
     const result = await upload.save();
     if (result) {
       return res.status(201).json({

@@ -60,15 +60,16 @@ export default function ProductViewAdmin() {
 
   return (
     <>
-      <div style={{ backgroundColor: "white", padding: "5em"}}>
+      <div style={{ backgroundColor: "black", padding: "5em"}}>
         <h1>Admin Product view</h1>
-        <p>{id}</p>
+        <p>ID of the watches: {id}</p>
         <p>Name of the watches: {product.name}</p>
         <p>Brand: {product.brand}</p>
         <p>Price: {product.price}</p>
         <p>Type: {product.type}</p>
-        <p>Strap Material: {product.strapMaterial}</p>
         <p>Material: {product.material}</p>
+        <p>Strap Material: {product.strapMaterial}</p>
+        
         <form>
           <input
             type="text"
