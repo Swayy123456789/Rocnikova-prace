@@ -44,10 +44,10 @@ export default function ProductCreateForm() {
 
   return (
     <>
-      <div className="bg-black items-center font-bold">
-        <h1>Create product</h1>
+      <div className="bg-black text-center font-bold">
+        <h1 className="text-center">Create product</h1>
 
-        <form encType="multipart/form-data">
+        <form className="items-center" encType="multipart/form-data">
         <input type="text" name="imgName" placeholder="Enter image name" onChange={handleChange} />
         
         <input

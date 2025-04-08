@@ -13,7 +13,7 @@ export const createUpload = async (formData) => {
 
 
 export const createUpdate = async (formData) => {
-  const req = await fetch(`http://localhost:3000/products`, {
+  const req = await fetch(`http://localhost:3000/product/${id}`, {
     method: "PUT",
     body: formData,
   });

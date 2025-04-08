@@ -3,14 +3,14 @@ import MiniMapFooter from "../MiniMapFooter/MiniMapFooter";
 
 const Footer = () => {
   return (
-    <footer className="!px-6 md:px-16 lg:px-28 !py-11 bg-opacity-40 backdrop-blur-lg">
+    <footer className="!px-6 md:px-16 lg:px-28 !py-11">
       <section className="container !mx-auto">
         <div className="flex justify-between gap-8 text-white">
           
           
           <div className="text-center md:text-left w-full">
             <h2 className="text-lg font-bold mb-4 text-center !py-5">WatchTime</h2>
-            <div className="w-full flex !py-8">
+            <div className="w-full flex !py-8 !ml-10">
           <MiniMapFooter />
       </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
       
 
       
-      <div className="!pt-5 text-white text-center !mx-auto !mt-5 border-gray-500 bg-opacity-40 backdrop-blur-lg">
+      <div className="!pt-5 text-white text-center !mx-auto !mt-5 border-gray-500">
         <p>© 2025 WatchTime. All Rights Reserved.</p>
       </div>
       </section>

@@ -11,7 +11,7 @@ export default function About() {
     <Header />
     
 
-    <section className="container backdrop-blur-lg p-7 bg-opacity-40 max-w-430 !mx-auto !rounded-lg !my-12">
+    <section className="container p-7 max-w-430 !mx-auto !rounded-lg !my-12">
       <div className="container !mx-auto px-5 bg-clip-padding !py-17">
         <div className="text-center !mb-1">
             

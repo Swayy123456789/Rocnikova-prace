@@ -35,12 +35,12 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <section className="backdrop-blur-lg bg-opacity-40 !mx-auto max-w-390 !rounded-lg">
+      <section className="!mx-auto max-w-390 !rounded-lg">
       <section className="!max-w-320 !px-6 !py-25 text-white !mx-auto !my-15">
         
         <div className="!grid !grid-cols-1 !md:grid-cols-2 !gap-8">
           {/* Formulář */}
-          <div className="backdrop-blur-lg bg-opacity-40 !p-8 rounded-lg shadow-lg border border-white ">
+          <div className="!p-8 rounded-lg shadow-lg border border-white">
             <h3 className="text-xl font-bold text-white !mb-6 !py-4 text-center">
               Máte dotaz? Neváhejte a napište nám!
             </h3>
@@ -56,7 +56,7 @@ export default function Contact() {
                 <div className="!mb-4">
                   <label
                     htmlFor="fullName"
-                    className="!block text-sm font-bold text-gray-400"
+                    className="!block text-sm font-bold text-white"
                   >
                     Jméno
                   </label>
@@ -67,14 +67,14 @@ export default function Contact() {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="!w-full !px-4 !py-2 !mt-2 backdrop-blur-lg bg-opacity-40 text-white border !border-gray-500 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="!w-full !px-4 !py-2 !mt-2 text-white border !border-gray-400 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
                   />
                 </div>
 
                 <div className="mb-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-400"
+                    className="block text-sm font-medium text-white"
                   >
                     E-mail
                   </label>
@@ -85,14 +85,14 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="!w-full !px-4 !py-2 !mt-2 backdrop-blur-lg bg-opacity-40 text-white border border-gray-500 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="!w-full !px-4 !py-2 !mt-2 text-white border border-gray-500 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
                   />
                 </div>
 
                 <div className="mb-4">
                   <label
                     htmlFor="subject"
-                    className="!block !text-sm font-bold text-gray-400"
+                    className="!block !text-sm font-bold text-white"
                   >
                     Předmět
                   </label>
@@ -101,7 +101,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="!w-full !px-4 !py-2 !mt-2 backdrop-blur-lg bg-opacity-40 text-white border border-gray-500 rounded-md !focus:ring-2 focus:ring-indigo-500 !outline-none"
+                    className="!w-full !px-4 !py-2 !mt-2 text-white border border-gray-400 rounded-md !focus:ring-2 focus:ring-indigo-500 !outline-none"
                   >
                     <option className="text-black" value="">Vyberte předmět</option>
                     <option className="text-black" value="Dotaz na produkt">Dotaz na produkt</option>
@@ -114,7 +114,7 @@ export default function Contact() {
                 <div className="!mb-4">
                   <label
                     htmlFor="message"
-                    className="!block !text-sm font-bold text-gray-400"
+                    className="!block !text-sm font-bold text-white"
                   >
                     Zpráva
                   </label>
@@ -125,7 +125,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows="4"
-                    className="!w-full !px-4 !py-2 !mt-2 backdrop-blur-lg bg-opacity-40 text-white border border-gray-500 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="!w-full !px-4 !py-2 !mt-2 text-white border border-gray-500 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none"
                   ></textarea>
                 </div>
 
@@ -140,36 +140,36 @@ export default function Contact() {
           </div>
 
           {/* Kontakt. údaje */}
-          <div className="backdrop-blur-lg bg-opacity-40 !p-8 rounded-lg !shadow-lg border border-gray-400 !py-10 !my-20">
+          <div className="!p-8 rounded-lg !shadow-lg border border-gray-400 !py-10 !my-20">
             <h3 className="text-xl font-bold text-white !mb-6">
               Kontaktní údaje
             </h3>
             <div className="!mb-4">
               <p className="font-bold text-white">Telefon</p>
-              <p className="text-gray-400">+420 735 847 770</p>
+              <p className="text-white">+420 735 847 770</p>
             </div>
 
             <div className="!mb-4">
               <p className="font-bold text-white">E-mail</p>
-              <p className="text-gray-400">watchtime@seznam.cz</p>
+              <p className="text-white">watchtime@seznam.cz</p>
             </div>
 
             <div className="!mb-4">
               <p className="font-bold text-white">
                 Adresa pro vrácení zboží
               </p>
-              <p className="text-gray-400">Pařížská, 110 00 Praha 1</p>
+              <p className="text-white">Pařížská, 110 00 Praha 1</p>
             </div>
 
             <div className="!mb-6">
-              <p className="font-bold text-gray-300">Otevírací doba</p>
-              <p className="text-gray-400">Pondělí - Pátek: 10:00 - 18:00</p>
-              <p className="text-gray-400">Sobota - Neděle: Zavřeno</p>
+              <p className="font-bold text-white">Otevírací doba</p>
+              <p className="text-white">Pondělí - Pátek: 10:00 - 18:00</p>
+              <p className="text-white">Sobota - Neděle: Zavřeno</p>
             </div>
 
             <div>
 
-              <p className="font-bold text-gray-300 !mb-17">
+              <p className="font-bold text-white !mb-17">
                 Sledujte nás na sociálních sítích
               </p>
 

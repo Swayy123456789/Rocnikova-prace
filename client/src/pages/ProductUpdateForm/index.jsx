@@ -44,12 +44,10 @@ export default function ProductUpdateForm() {
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value});
-  }
-
-  const handleUpdate = (e) => {
     e.preventDefault();
     updateForm();
   }
+
 
   useEffect(() => {
     load();

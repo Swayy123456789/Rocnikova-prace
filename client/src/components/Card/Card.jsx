@@ -27,11 +27,8 @@ export default function MediaCard({ product }) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">
-              <ShoppingBasket />
-            </Button>
-
-            <Button size="small">Show details</Button>
+            {product.brand},
+            {" " + product.material}
           </CardActions>
         </Card>
       </Link>

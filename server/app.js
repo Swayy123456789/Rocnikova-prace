@@ -8,9 +8,14 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const PORT = 3000;
 
+const dotenv = require("dotenv");
+ 
+dotenv.config();
+const DB_KEY = process.env.DB_KEY;
+
 mongoose
-.connect(`mongodb+srv://admin:adminadmin@cluster0.4ixx5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
-.then(() => console.log("Database facha bracho"))
+.connect(DB_KEY)
+.then(() => console.log("Database connected"))
 .catch((err) => console.log(err))
 
 const indexRouter = require('./routes/index');

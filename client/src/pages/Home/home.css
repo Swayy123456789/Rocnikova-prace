@@ -1,5 +1,6 @@
 body {
-    background-image: url("../../../img/loupe-mono-dark.png");
+    background: #606060;
+    background: linear-gradient(135deg, #606060, #1B1B1B);
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
