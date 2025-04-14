@@ -11,11 +11,11 @@ export default function About() {
     <Header />
     
 
-    <section className="container p-7 max-w-430 !mx-auto !rounded-lg !my-12">
+    <section className="container p-7 max-w-430 !mx-auto !rounded-lg !my-12 font-bold">
       <div className="container !mx-auto px-5 bg-clip-padding !py-17">
         <div className="text-center !mb-1">
             
-          <h1 className="text-4xl font-bold text-white">About us</h1>
+          <h1 className="text-5xl font-bold text-white">About us</h1>
           <br />
           <p className="!mt-5 text-lg text-white justify-center max-w-450 center">
           We are your reliable partner for quality watches. We offer a wide selection of 
@@ -53,7 +53,7 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
             <div className="absolute inset-0 flex justify-center items-center">
-              <span className="text-4xl font-semibold text-white">
+              <span className="text-4xl font-bold text-white">
                 Your time starts here.
               </span>
             </div>
@@ -64,7 +64,7 @@ export default function About() {
 
         
         <div className="!mt-57 text-center !mb-20">
-          <h2 className="text-5xl font-semibold text-white">Why choose us?</h2>
+          <h2 className="text-5xl font-bold text-white">Why choose us?</h2>
           <div className="!mt-38 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex items-center space-x-4">
               <div className="bg-blue-500 text-white p-4 rounded-full">
@@ -85,9 +85,9 @@ export default function About() {
               </div>
               
              
-              <div className="!mr-1 ">
+              <div className="!mr-1">
                 <h3 className="text-2xl font-semibold text-white">Quality watches</h3>
-                <p className="text-white ">
+                <p className="text-white font-semibold">
                 Our watches are carefully selected and tested for their longevity and precision.
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function About() {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">Free shipping</h3>
-                <p className="text-white">
+                <p className="text-white font-semibold">
                 We offer free shipping on orders over a certain amount.
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function About() {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-white">Fast and Easy Exchange</h3>
-                <p className="text-white">
+                <p className="text-white font-semibold">
                 If you're not satisfied with the watches, we offer an easy exchange or return policy.
                 </p>
               </div>

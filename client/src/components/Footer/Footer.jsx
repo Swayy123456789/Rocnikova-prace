@@ -1,9 +1,10 @@
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import MiniMapFooter from "../MiniMapFooter/MiniMapFooter";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="!px-6 md:px-16 lg:px-28 !py-11">
+    <>
+    <footer className="!px-6 md:px-16 lg:px-28 !py-11 !w-full">
       <section className="container !mx-auto">
         <div className="flex justify-between gap-8 text-white">
           
@@ -56,7 +57,7 @@ const Footer = () => {
       </div>
       </section>
     </footer>
+    </>
   );
 };
 
-export default Footer;

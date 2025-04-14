@@ -60,9 +60,9 @@ export default function ProductViewAdmin() {
 
   return (
     <>
-      <div style={{ backgroundColor: "black", padding: "5em"}}>
-        <h1>Admin Product view</h1>
-        <p>ID of the watches: {id}</p>
+      <section className="container max-w-300 text-center">
+        <h1>{product.name}</h1>
+        <p>ID of watches: {id}</p>
         <p>Name of the watches: {product.name}</p>
         <p>Brand: {product.brand}</p>
         <p>Price: {product.price}</p>
@@ -86,7 +86,7 @@ export default function ProductViewAdmin() {
         <Link to={"/"}>
           <p>Go home</p>
         </Link>
-      </div>
+      </section>
     </>
   );
 }

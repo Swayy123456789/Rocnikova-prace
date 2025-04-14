@@ -15,7 +15,7 @@ export default function ProductLinkAdmin(props) {
 
   return (
     <>
-      <div className="">
+      <div className="!p-3">
         <div>
           <Link to={`/admin/product/${props._id}`}>{props.name}</Link>
           <button

@@ -41,7 +41,7 @@ export default function ProductListAdmin() {
     return (
       <>
       <section className="text-center w-full">
-        <h1 className="font-bold">Product list</h1>
+        <h1 className="font-bold text-5xl text-white">Product list</h1>
         
         {
           product.map((product, index) => (
