@@ -13,8 +13,10 @@ export default function MediaCard({ product }) {
   return (
     <>
       <Link to={`/product/${product._id}`}>
+
         <Card sx={{  width: 300,             
-      height: 380,             
+      height: 380, 
+      backgroundColor: "#cccccc",           
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",
@@ -27,7 +29,7 @@ export default function MediaCard({ product }) {
           <CardMedia
   sx={{
     width: "100%",             
-    height: 160,                
+    height: 200,                
     overflow: "hidden",        
     display: "flex",
     alignItems: "center",      
@@ -40,7 +42,7 @@ export default function MediaCard({ product }) {
     style={{
       width: "100%",            
       height: "100%",        
-      objectFit: "cover",    
+      objectFit: "contain",    
     }}
   />
 

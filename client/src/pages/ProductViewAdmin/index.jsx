@@ -1,6 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { deleteProduct, getProductById } from "../../models/Product";
 import { useState, useEffect } from "react";
+import ProductListAdmin from "../ProductListAdmin";
 
 export default function ProductViewAdmin() {
   const { id } = useParams();
@@ -60,6 +61,7 @@ export default function ProductViewAdmin() {
 
   return (
     <>
+    <ProductListAdmin />
       <section className="container font-semibold text-white text-center !py-9">
         <h1>{product.name}</h1>
         <p>ID of watches: {id}</p>

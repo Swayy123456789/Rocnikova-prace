@@ -46,8 +46,8 @@ export default function ProductView() {
    if (isLoaded === null) {
     return (
       <>
-      <div className="container mx-auto my-auto text-center font-bold text-2xl text-gray-300">
-        <p>Product not found</p>
+      <div className="min-h-screen flex items-center justify-center text-white">
+        <p className="text-2xl font-bold">Product not found</p>
       </div>
       </>
     );
@@ -56,7 +56,7 @@ export default function ProductView() {
   if (!isLoaded) {
     return (
       <>
-      <div className="container mx-auto my-auto text-center font-bold text-2xl text-gray-300">
+      <div className="min-h-screen flex items-center justify-center text-white">
         <p>Product is loading...</p>
       </div>
       </>
@@ -65,39 +65,46 @@ export default function ProductView() {
 
   return (
     <>
-    <div className="container mx-auto px-4 py-8 max-w-7xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Product Image */}
-        <div className="flex justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br">
+      <div className="w-full max-w-5xl grid md:grid-cols-2 gap-10 items-center rounded-3xl !p-8 shadow-xl text-white transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
+        
+        {/* Image */}
+        <div className="flex justify-center items-center h-[500px]">
           <img
             src={product.imagePath}
             alt={product.name}
-            className="w-full h-auto object-contain max-w-md"
+            className="max-w-sm w-full rounded-xl shadow-md transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </div>
-
-        {/* Product Details */}
-        <div className="flex flex-col !space-y-5 !my-auto">
-          <h1 className="text-4xl font-bold text-white">{product.name}</h1>
-          <p className="text-xl text-white">{`ID: ${id}`}</p>
-          
-          <div className="!space-y-2 text-gray-100 text-lg !py-2">
-            <p><span className="font-semibold">Brand:</span> {product.brand}</p>
-            <p><span className="font-semibold">Price:</span> ${product.price}</p>
-            <p><span className="font-semibold">Type:</span> {product.type}</p>
-            <p><span className="font-semibold">Strap Material:</span> {product.strapMaterial}</p>
-            <p><span className="font-semibold">Material:</span> {product.material}</p>
-          </div>
-
-          {/* Back Button */}
-          <div className="mt-6">
-            <Link to="/products">
-              <button className="flex items-center !px-6 !py-3 bg-gray-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-400 transition ease-in-out duration-325">
-                <ArrowLeft className="mr-2" />
-                Back to products
-              </button>
-            </Link>
-          </div>
+  
+        {/* Info */}
+        <div className="!space-y-4 h-[500px] flex flex-col justify-between">
+          <h1 className="text-4xl font-bold">{product.name}</h1>
+          <p className="text-sm text-gray-300">Product ID: {id}</p>
+  
+          <p>
+            <span className="font-semibold">Brand:</span> {product.brand}
+          </p>
+          <p>
+            <span className="font-semibold">Price:</span> ${product.price}
+          </p>
+          <p>
+            <span className="font-semibold">Type:</span> {product.type}
+          </p>
+          <p>
+            <span className="font-semibold">Strap Material:</span> {product.strapMaterial}
+          </p>
+          <p>
+            <span className="font-semibold">Material:</span> {product.material}
+          </p>
+  
+          <Link
+            to={"/products"}
+            className="inline-flex items-center gap-2 !mt-6 !px-4 !py-2 max-w-52 bg-gray-700 hover:bg-gray-600 transition-all duration-300 rounded-xl shadow text-white hover:translate-x-1 hover:shadow-lg"
+          >
+            <ArrowLeft size={18} />
+            <span>Back to Products</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -32,17 +32,17 @@ export default function Footer() {
             <ul className="flex !justify-around !space-y-3">
               <li>
                 <a href="https://www.facebook.com" aria-label="Facebook">
-                  <Facebook className="w-6 h-6 hover:text-gray-300" />
+                  <Facebook className="w-6 h-6 hover:text-yellow-500 transition duration-400" />
                 </a>
               </li>
               <li>
                 <a href="https://x.com" aria-label="Twitter">
-                  <Twitter className="w-6 h-6 hover:text-gray-300" />
+                  <Twitter className="w-6 h-6 hover:text-yellow-500 transition duration-400" />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com" aria-label="Instagram">
-                  <Instagram className="w-6 h-6 hover:text-gray-300" />
+                  <Instagram className="w-6 h-6 hover:text-yellow-500 transition duration-400" />
                 </a>
               </li>
             </ul>

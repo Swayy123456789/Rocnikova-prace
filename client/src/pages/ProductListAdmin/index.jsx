@@ -23,37 +23,42 @@ export default function ProductListAdmin() {
 
   if (isLoaded === null) {
     return (
-      <>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 text-white text-xl font-semibold">
         <p>Products not found</p>
-      </>
-    )
+      </div>
+    );
   }
-
+  
   if (!isLoaded) {
     return (
-      <>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br text-white text-xl font-semibold animate-pulse">
         <p>Loading...</p>
-      </>
-    )
+      </div>
+    );
   }
-
+  
   if (isLoaded) {
     return (
       <>
-      <section className="text-center w-full">
-        <h1 className="font-bold text-5xl text-white">Product list</h1>
-        
-        {
-          product.map((product, index) => (
-            <ProductLinkAdmin key={index} {...product} />
-          ))
-        }
-
-        <Link to={"/"}>
-          <p>Go home</p>
-        </Link>
+        <section className="min-h-screen !px-6 !py-16 bg-gradient-to-br text-white">
+          <h1 className="text-5xl font-bold text-center !mb-10">Product list admin</h1>
+          <h1 className="text-xl font-bold text-center !mb-20">Click on each product for more details</h1>
+  
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !gap-6 place-items-center">
+            {product.map((product, index) => (
+              <ProductLinkAdmin key={index} {...product} />
+            ))}
+          </div>
+  
+          <div className="!mt-12 flex justify-center">
+            <Link
+              to="/admin"
+              className="inline-flex items-center !gap-2 !px-6 !py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl shadow transition-all duration-300 hover:translate-x-1 hover:shadow-lg"
+            >
+              <span>🏠 Go Back</span>
+            </Link>
+          </div>
         </section>
       </>
-    )
-  }
-}
+    );
+  }}
