@@ -60,7 +60,7 @@ export default function ProductViewAdmin() {
 
   return (
     <>
-      <section className="container max-w-300 text-center">
+      <section className="container font-semibold text-white text-center !py-9">
         <h1>{product.name}</h1>
         <p>ID of watches: {id}</p>
         <p>Name of the watches: {product.name}</p>

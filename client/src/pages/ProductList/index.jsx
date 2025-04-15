@@ -10,7 +10,7 @@ import OutlinedCard from "../../components/Card/Card";
 
 export default function ProductList() {
   
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
 
   const load = async () => {
@@ -46,17 +46,17 @@ export default function ProductList() {
     return (
       <>
       <Header />
-       <div className="container flex !mx-auto justify-between grid-cols-3 !my-30">
-        {
-          product.map((products, index) => (
-            //<ProductLink key={index} {...products} />
-            <OutlinedCard key={index} product={products} />
-          ))
-        }
-      </div>
-
-        <Footer />
-      </>
+      <div className="w-full flex justify-center px-4 !py-20">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-30 justify-items-center">
+    {
+      product.map((products, index) => (
+        <OutlinedCard key={index} product={products} />
+      ))
+    }
+  </div>
+</div>
+      <Footer />
+    </>
     )
   }
 }

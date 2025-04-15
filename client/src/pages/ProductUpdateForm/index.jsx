@@ -71,7 +71,7 @@ export default function ProductUpdateForm() {
 
   return (
     <>
-      <div className="bg-black text-center font-bold">
+      <div className="text-center font-bold">
         <h1>Update product</h1>
 
         <form className="items-center" encType="multipart/form-data">

@@ -14,9 +14,11 @@ export default function Admin() {
         <Link to={"/add-product"}>
             <p>Add product</p>  
         </Link>
+        
         <Link to={"/view-product"}>
             <p className="!my-10">View product</p>
         </Link>
+       
          </div>
         </section>
         <ProductListAdmin />

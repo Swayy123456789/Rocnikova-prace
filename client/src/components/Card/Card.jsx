@@ -8,16 +8,44 @@ import Typography from "@mui/material/Typography";
 import { ShoppingBasket } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 export default function MediaCard({ product }) {
   return (
     <>
       <Link to={`/product/${product._id}`}>
-        <Card sx={{ width: 200 }} className="container">
+        <Card sx={{  width: 300,             
+      height: 380,             
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      alignSelf: "start",
+      transition: "transform 0.3s ease, box-shadow 0.3s ease", "&:hover": {
+      transform: "scale(1.05)",  
+      boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)" }}} className="shadow-md hover:shadow-xl transition duration-300">
+
+
           <CardMedia
-            sx={{ height: 150 }}
-            image={product.imagePath}
-            title={product.brand}
-          />
+  sx={{
+    width: "100%",             
+    height: 160,                
+    overflow: "hidden",        
+    display: "flex",
+    alignItems: "center",      
+    justifyContent: "center",   
+  }}
+>
+  <img
+    src={product.imagePath}
+    alt={product.brand}
+    style={{
+      width: "100%",            
+      height: "100%",        
+      objectFit: "cover",    
+    }}
+  />
+
+
+      </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {product.name}

@@ -44,11 +44,11 @@ export default function ProductCreateForm() {
 
   return (
     <>
-      <div className="bg-black text-center font-bold">
-        <h1 className="text-center">Create product</h1>
+      <div className="text-center font-bold">
+        <h1 className="text-center text-3xl font-semibold text-white">Create product</h1>
 
-        <form className="items-center" encType="multipart/form-data">
-        <input type="text" name="imgName" placeholder="Enter image name" onChange={handleChange} />
+        <form className="items-center text-white" encType="multipart/form-data">
+        <input className="text-white" type="text" name="imgName" placeholder="Enter image name" onChange={handleChange} />
         
         <input
             type="text"
@@ -100,18 +100,22 @@ export default function ProductCreateForm() {
 
         
 
-        
+        <button>
         <input type="file" name="imgFile" onChange={handleImageChange}/>
+        </button>
 
+        <button>
         <input type="submit" value="Upload product" onClick={submit}/>
-
+        </button>
         
 
       </form>
         
         <p>{info}</p>
-        <Link to={"/"}>
+        <Link to={"/admin"}>
+          <button>
           <p>Go back</p>
+          </button>
         </Link>
       </div>
     </>

@@ -43,12 +43,12 @@ export default function ProductView() {
     load();
   }, []);
 
-  if (isLoaded === null) {
+   if (isLoaded === null) {
     return (
       <>
-      <div className="container !mx-auto !my-auto text-center font-bold text-2xl">
+      <div className="container mx-auto my-auto text-center font-bold text-2xl text-gray-300">
         <p>Product not found</p>
-        </div>
+      </div>
       </>
     );
   }
@@ -56,41 +56,51 @@ export default function ProductView() {
   if (!isLoaded) {
     return (
       <>
-      
-
-      <div className="container !mx-auto !my-auto text-center font-bold text-2xl">
+      <div className="container mx-auto my-auto text-center font-bold text-2xl text-gray-300">
         <p>Product is loading...</p>
-        </div>
-
-        
+      </div>
       </>
     );
   }
 
   return (
     <>
-    
-      <div className="container font-bold text-xl text-gray-200 text-center sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-        <h1>{product.name}</h1>
-        <p>{id}</p>
-        <p>Name: {product.name}</p>
-        <p>Brand: {product.brand}</p>
-        <p>Price: {product.price}</p>
-        <p>Type: {product.type}</p>
-        <p>Strap Material: {product.strapMaterial}</p>
-        <p>Material: {product.material}</p>
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Product Image */}
+        <div className="flex justify-center">
+          <img
+            src={product.imagePath}
+            alt={product.name}
+            className="w-full h-auto object-contain max-w-md"
+          />
         </div>
 
-      <div className="container ">
-        <img src={product.imagePath} alt="" />
-      </div>
+        {/* Product Details */}
+        <div className="flex flex-col !space-y-5 !my-auto">
+          <h1 className="text-4xl font-bold text-white">{product.name}</h1>
+          <p className="text-xl text-white">{`ID: ${id}`}</p>
+          
+          <div className="!space-y-2 text-gray-100 text-lg !py-2">
+            <p><span className="font-semibold">Brand:</span> {product.brand}</p>
+            <p><span className="font-semibold">Price:</span> ${product.price}</p>
+            <p><span className="font-semibold">Type:</span> {product.type}</p>
+            <p><span className="font-semibold">Strap Material:</span> {product.strapMaterial}</p>
+            <p><span className="font-semibold">Material:</span> {product.material}</p>
+          </div>
 
-      <button className="shadow-lg">
-        <Link to={"/products"}>
-        <ArrowLeft />
-        <p>Back to products</p>
-        </Link>
-        </button>
+          {/* Back Button */}
+          <div className="mt-6">
+            <Link to="/products">
+              <button className="flex items-center !px-6 !py-3 bg-gray-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-400 transition ease-in-out duration-325">
+                <ArrowLeft className="mr-2" />
+                Back to products
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 }
