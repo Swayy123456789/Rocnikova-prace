@@ -78,6 +78,7 @@ button:focus-visible {
 form {
   display: flex;
   flex-direction: column;
+  width: 450px;
   gap: 1em;
   
 }
@@ -87,9 +88,13 @@ form input[type=text], form input[type=number] {
   /*border: 2px solid rgba(0, 0, 0, 0.148);*/
   border: 2px solid transparent;
   border-radius: 8px;
-  padding: 12px 8px;
+  padding: 13px 9px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  font-family: "Semibold";
+}
+
+form input[type=text]:hover, form input[type=number]:hover {
+  color: rgb(222, 201, 82);
+  transition: all 0.24s ease 0.09s;
 }
 
 form input[type=text]:focus, form input[type=number]:focus {
@@ -98,7 +103,7 @@ form input[type=text]:focus, form input[type=number]:focus {
   border-radius: 8px;
   padding: 12px 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  font-family: "Semibold";
+  
 }
 
 

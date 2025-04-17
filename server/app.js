@@ -6,7 +6,8 @@ const logger = require('morgan')
 const cors = require("cors");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-const PORT = 3000;
+
+
 
 const dotenv = require("dotenv");
  
@@ -56,5 +57,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

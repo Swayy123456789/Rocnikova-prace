@@ -20,9 +20,9 @@ export default function Footer() {
           <div className="text-center w-full">
             <h2 className="text-lg font-bold !mb-12 !py-4">Useful links</h2>
             <ul className="!space-y-6">
-              <li><a href="/products" className="hover:underline">Products</a></li>
-              <li><a href="/contact" className="hover:underline">Contact</a></li>
-              <li><a href="/about" className="hover:underline">About</a></li>
+              <li><a href="/products" className="hover:underline border !p-2 rounded-xl border-gray-400">Products</a></li>
+              <li><a href="/contact" className="hover:underline border !p-2 rounded-xl border-gray-400">Contact </a></li>
+              <li><a href="/about" className="hover:underline border !p-2 rounded-xl border-gray-400">About</a></li>
             </ul>
           </div>
 

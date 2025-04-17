@@ -44,79 +44,104 @@ export default function ProductCreateForm() {
 
   return (
     <>
-      <div className="text-center font-bold">
-        <h1 className="text-center text-3xl font-semibold text-white">Create product</h1>
+      <div className="text-center font-bold min-h-screen flex flex-col items-center justify-center bg-gradient-to-br !px-4">
+      <div className="rounded-2xl border border-gray-500 shadow-xl !p-6 !mb-6 w-fit mx-auto">
+          <h1 className="text-4xl font-semibold text-white">Create product</h1>
+            </div>
+  
+            <div className="rounded-2xl shadow-xl !p-8 max-w-xl mx-auto !mt-6">
+  <form className="flex flex-col gap-4 text-white" encType="multipart/form-data">
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="imgName"
+      placeholder="Enter image name"
+      onChange={handleChange}
+    />
 
-        <form className="items-center text-white" encType="multipart/form-data">
-        <input className="text-white" type="text" name="imgName" placeholder="Enter image name" onChange={handleChange} />
-        
-        <input
-            type="text"
-            name="name"
-            required
-            placeholder="Enter name"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="name"
+      required
+      placeholder="Enter the name of the watch"
+      onChange={handleChange}
+    />
 
-        <input
-            type="number"
-            name="price"
-            required
-            placeholder="Enter price"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="number"
+      name="price"
+      required
+      placeholder="Enter price"
+      onChange={handleChange}
+    />
 
-        <input
-            type="text"
-            name="brand"
-            required
-            placeholder="Enter brand"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="brand"
+      required
+      placeholder="Enter brand"
+      onChange={handleChange}
+    />
 
-        <input
-            type="text"
-            name="type"
-            required
-            placeholder="Type"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="type"
+      required
+      placeholder="Type"
+      onChange={handleChange}
+    />
 
-        <input
-            type="text"
-            name="material"
-            required
-            placeholder="Enter material"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="material"
+      required
+      placeholder="Enter material"
+      onChange={handleChange}
+    />
 
-        <input
-            type="text"
-            name="strapMaterial"
-            required
-            placeholder="Enter strap material"
-            onChange={handleChange}
-          />
+    <input
+      className="!p-3 rounded-md outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+      type="text"
+      name="strapMaterial"
+      required
+      placeholder="Enter strap material"
+      onChange={handleChange}
+    />
 
-        
+    <div className="!mt-2">
+      <input
+        type="file"
+        name="imgFile"
+        onChange={handleImageChange}
+        className="text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 transition-all"
+      />
+    </div>
 
-        <button>
-        <input type="file" name="imgFile" onChange={handleImageChange}/>
-        </button>
+    <button
+      type="submit"
+      onClick={submit}
+      className="!mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold !py-2 !px-4 rounded-md transition-all shadow-md">
+    
+      Upload product
 
-        <button>
-        <input type="submit" value="Upload product" onClick={submit}/>
-        </button>
-        
+    </button>
 
-      </form>
-        
-        <p>{info}</p>
-        <Link to={"/admin"}>
-          <button>
-          <p>Go back</p>
+
+    <Link to={"/admin"} className="!mt-4">
+          <button className="bg-gray-700 hover:bg-gray-600 text-white hover:text-yellow-500 !py-2 !px-4 rounded-xl transition-all duration-325 hover:translate-x-1 hover:shadow-lg shadow-md">
+            Back to admin page
           </button>
         </Link>
+  </form>
+</div>
+  
+        <p className="text-white !mt-4">{info}</p>
+  
       </div>
     </>
   );

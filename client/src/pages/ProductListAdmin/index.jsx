@@ -53,9 +53,9 @@ export default function ProductListAdmin() {
           <div className="!mt-12 flex justify-center">
             <Link
               to="/admin"
-              className="inline-flex items-center !gap-2 !px-6 !py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-xl shadow transition-all duration-300 hover:translate-x-1 hover:shadow-lg"
+              className="inline-flex items-center !gap-2 !px-6 !py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-xl shadow transition-all duration-300 hover:translate-x-1 hover:shadow-lg"
             >
-              <span>🏠 Go Back</span>
+              <span>Back to admin panel</span>
             </Link>
           </div>
         </section>
