@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { getAllProduct } from "../../models/Product";
 import ProductLink from "./ProductLink";
 import Header from "../../components/Header";
-import { Card } from "@mui/material";
 import OutlinedCard from "../../components/Card/Card";
 
 

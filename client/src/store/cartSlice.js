@@ -9,19 +9,25 @@ const cartSlice = createSlice({
     reducers: {
       addToCart: (state, action) => {
         const item = action.payload;
+      
+        // Default quantity fallback
+        const quantity = item.quantity ?? 1;
+      
         const existing = state.products.find(p => p.id === item.id);
+      
         if (existing) {
-          existing.quantity += item.quantity;
+          existing.quantity += quantity;
         } else {
-          state.products.push(item);
+          state.products.push({ ...item, quantity });
         }
-  
-        // Update total price
+      
+        // Přepočítat celkovou cenu
         state.totalPrice = state.products.reduce(
-          (total, item) => total + item.price * item.quantity,
+          (sum, product) => sum + product.price * product.quantity,
           0
         );
       },
+      
       removeFromCart: (state, action) => {
         const id = action.payload;
         state.products = state.products.filter(p => p.id !== id);

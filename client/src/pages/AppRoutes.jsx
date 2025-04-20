@@ -12,6 +12,7 @@ import ProductView from "./ProductView";
 import ProductUpdateForm from "./ProductUpdateForm";
 import ProductViewAdmin from "./ProductViewAdmin";
 import ProductListAdmin from "./ProductListAdmin";
+import Cart from "../components/Cart/Cart";
 
 
 
@@ -31,6 +32,7 @@ export default function AppRoutes() {
                 <Route path="/admin/product/:id" element={<ProductViewAdmin/>}/>
                 <Route path="/products" element={<ProductList/>}/>
                 <Route path="/update-product/:id" element={<ProductUpdateForm/>}/>
+                <Route path="/cart" element={<Cart/>}/>
             </Routes>
         </BrowserRouter>
     </>

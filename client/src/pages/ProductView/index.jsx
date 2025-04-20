@@ -43,7 +43,7 @@ export default function ProductView() {
   };
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...product, quantity: 1 }));
+    dispatch(addToCart({ ...product, id: crypto.randomUUID(), quantity: 1 }));
   };
 
   useEffect(() => {
@@ -95,8 +95,8 @@ export default function ProductView() {
           {/* Add to cart button */}
           <button
             onClick={handleAddToCart}
-            className="bg-gray-500 hover:bg-green-700 transition text-white font-semibold !px-4 !py-2 rounded-xl shadow"
-          >
+            className="bg-gray-500 hover:bg-green-700 transition text-white font-semibold !px-4 !py-2 rounded-xl shadow">
+          
             Přidat do košíku
           </button>
 
