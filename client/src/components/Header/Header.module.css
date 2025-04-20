@@ -6,8 +6,6 @@
     padding: 0;
 }
 
-
-
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -15,18 +13,6 @@ li, a, button {
     color: white;
     text-decoration: none;
 }
-
-/*header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 30px 5%;
-    background-color: rgba(101, 65, 144, 0);
-    backdrop-filter: blur(10px);
-    width: 100vw;
-    align-items: center;
-}*/
 
 .outline {
     margin-top: 28px;
@@ -54,8 +40,7 @@ li, a, button {
     outline-offset: 10px;
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.200);
     transition: 0.4s ease 0.1s;
-} 
-
+}
 
 .logo {
     cursor: pointer;
@@ -72,7 +57,6 @@ li, a, button {
     display: inline-block;
     padding: 0px 27px;
     margin: 0 25px;
-    
 }
 
 .nav__links li a {
@@ -83,3 +67,31 @@ li, a, button {
 .nav__links li a:hover {
     color: rgb(222, 201, 82);
 }
+
+/* Košík - Malý náhled */
+.cartWrapper {
+    position: relative;
+}
+
+.cartWrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cartWrapper button:hover {
+    transform: scale(1.1);
+}
+
+
+/*header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px 5%;
+    background-color: rgba(101, 65, 144, 0);
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    align-items: center;
+}*/
