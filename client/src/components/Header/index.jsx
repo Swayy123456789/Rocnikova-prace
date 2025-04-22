@@ -31,7 +31,7 @@ export default function Header() {
       initial="hidden"
       animate="visible"
     >
-      <section className="container !mx-auto max-w-screen-xl">
+      <section className="container !mx-auto !max-w-255">
         <header>
           <div className={s.outline}> {/* Používáme tvoje CSS třídy pro Header */}
             <Link to={"/"}>

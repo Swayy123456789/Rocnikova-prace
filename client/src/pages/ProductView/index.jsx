@@ -70,7 +70,7 @@ export default function ProductView() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br">
       <div className="w-full max-w-5xl grid md:grid-cols-2 gap-10 items-center rounded-3xl !p-8 shadow-xl text-white transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
         
-        {/* Image */}
+        {/* obrazek */}
         <div className="flex justify-center items-center h-[500px]">
           <img
             src={product.imagePath}
@@ -79,7 +79,7 @@ export default function ProductView() {
           />
         </div>
 
-        {/* Info */}
+        {/* info */}
         <div className="!space-y-4 h-[500px] flex flex-col justify-between">
           <div>
             <h1 className="text-4xl font-bold">{product.name}</h1>
@@ -92,12 +92,11 @@ export default function ProductView() {
             <p><span className="font-semibold">Material:</span> {product.material}</p>
           </div>
 
-          {/* Add to cart button */}
+          {/* pridani do kosiku tlacitko */}
           <button
             onClick={handleAddToCart}
             className="bg-gray-500 hover:bg-green-700 transition text-white font-semibold !px-4 !py-2 rounded-xl shadow">
-          
-            Přidat do košíku
+            Add to cart
           </button>
 
           <Link
