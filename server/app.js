@@ -6,9 +6,6 @@ const logger = require('morgan')
 const cors = require("cors");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-
-
-
 const dotenv = require("dotenv");
  
 dotenv.config();
@@ -22,6 +19,7 @@ mongoose
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const stripeRouter = require("./routes/stripe");
 
 
 const app = express();
@@ -40,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/stripe', stripeRouter);
 
 
 // catch 404 and forward to error handler
