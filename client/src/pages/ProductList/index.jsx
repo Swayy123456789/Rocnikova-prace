@@ -28,7 +28,7 @@ export default function ProductList() {
   if (isLoaded === null) {
     return (
       <>
-        <p>Products not found</p>
+        <p className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">Products not found</p>
       </>
     )
   }
@@ -36,7 +36,7 @@ export default function ProductList() {
   if (!isLoaded) {
     return (
       <>
-        <p>Loading...</p>
+        <p className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">Loading...</p>
       </>
     )
   }

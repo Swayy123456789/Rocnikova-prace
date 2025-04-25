@@ -1,6 +1,8 @@
 import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
+import { AddressElement } from "@stripe/react-stripe-js";
+
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -38,9 +40,24 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
+    <form className="!w-full !my-20" id="payment-form" onSubmit={handleSubmit}>
+      <AddressElement
+  options={{
+    mode: "shipping", // nebo muze byt i mod "billing"
+    allowedCountries: ["CZ", "SK", "DE", "USA", "AUS"],
+    defaultValues: {
+      name: "",
+      address: {
+        line1: "",
+        city: "",
+        postal_code: "",
+        country: ""
+      }
+    }
+  }}
+/>
       <PaymentElement id="payment-element" />
-      <button disabled={isProcessing || !stripe || !elements} id="submit">
+      <button className="w-fit !mx-auto !py-2 !px-6 border rounded-xl" disabled={isProcessing || !stripe || !elements} id="submit">
         <span id="button-text">
           {isProcessing ? "Processing ... " : "Pay now"}
         </span>

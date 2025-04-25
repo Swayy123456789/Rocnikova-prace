@@ -12,8 +12,8 @@ export const createUpload = async (formData) => {
 };
 
 
-export const createUpdate = async (formData) => {
-  const req = await fetch(`http://localhost:3000/product/${id}`, {
+export const createUpdate = async (id, formData) => {
+  const req = await fetch(`http://localhost:3000/products/${id}`, {
     method: "PUT",
     body: formData,
   });

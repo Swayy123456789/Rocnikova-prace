@@ -1,6 +1,7 @@
 const Product = require("../models/products");
 const imageController = require("./image");
-
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 
 
 
@@ -70,13 +71,19 @@ exports.updateProduct = async (req, res, next) => {
       material: req.body.material,
       strapMaterial: req.body.strapMaterial
     };
-    const result = await Product.findByIdAndUpdate(req.params.id, data);
+
+    if (req.file) {
+      data.imagePath = `/img/${req.file.filename}`;
+    }
+
+    const result = await Product.findByIdAndUpdate(req.params.id, data, { new: true }); 
     if (result) {
       return res.status(200).send({
         message: "Product updated",
         payload: result,
       });
     }
+
     res.status(500).send({
       message: "Product not updated",
     });
@@ -84,6 +91,7 @@ exports.updateProduct = async (req, res, next) => {
     res.status(500).send(err);
   }
 };
+
 exports.deleteProduct = async (req, res, next) => {
   try {
     const result = await Product.findByIdAndDelete(req.params.id);

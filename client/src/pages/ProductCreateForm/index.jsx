@@ -31,7 +31,7 @@ export default function ProductCreateForm() {
   const postForm = async () => {
     const product = await createProduct(formData);
     if (product.status === 201) {
-      return navigate("/admin");
+      return navigate("/products");
     }
     setInfo(product.message);
   };
@@ -91,7 +91,7 @@ export default function ProductCreateForm() {
       type="text"
       name="type"
       required
-      placeholder="Type"
+      placeholder="Enter type"
       onChange={handleChange}
     />
 

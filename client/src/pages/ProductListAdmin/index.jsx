@@ -23,16 +23,16 @@ export default function ProductListAdmin() {
 
   if (isLoaded === null) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900 text-white text-xl font-semibold">
-        <p>Products not found</p>
-      </div>
+      <>
+        <p className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">Products not found</p>
+        </>
     );
   }
   
   if (!isLoaded) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br text-white text-xl font-semibold animate-pulse">
-        <p>Loading...</p>
+      <div className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">
+        <p className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">Loading...</p>
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function ProductListAdmin() {
     return (
       <>
         <section className="min-h-screen !px-6 !py-16 bg-gradient-to-br text-white">
-          <h1 className="text-5xl font-bold text-center !mb-10">Product list admin</h1>
+          <h1 className="text-5xl font-bold text-center !mb-10">Admin product list</h1>
           <h1 className="text-xl font-bold text-center !mb-20">Click on each product for more details</h1>
   
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !gap-6 place-items-center">

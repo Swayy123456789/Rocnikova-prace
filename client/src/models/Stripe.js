@@ -19,7 +19,11 @@ export const createPaymentIntent = async () => {
             Accept: "application/json",
             "Content-Type": "application/json"
         },
-        method: "POST"
+        method: "POST",
+        body: JSON.stringify({
+            amount: 0, 
+            currency: "USD" 
+        })
     });
     const data = await req.json();
     return {

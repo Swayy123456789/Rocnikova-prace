@@ -8,7 +8,6 @@ import { createPaymentIntent, getConfig } from "../../models/Stripe";
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
 
 
 const Cart = () => {
@@ -66,6 +65,13 @@ const Cart = () => {
                       Price: {product.price} $
                     </p>
                   </div>
+                  <div className="w-32 h-32 flex justify-center items-center ml-4">
+        <img
+          src={product.imagePath}
+          alt={product.brand}
+          className="w-full h-full object-contain"
+        />
+      </div>
                   <button
                     onClick={() => dispatch(removeFromCart(product.id))}
                     className="text-sm bg-gray-500 !px-4 !py-2 rounded-lg hover:bg-gray-600 transition"
@@ -105,7 +111,7 @@ const Cart = () => {
                   </div>
 
                 
-                  <div className="flex items-center justify-center h-screen">
+                  <div className="min-h-screen w-full">
                   {clientSecret && stripePromise && (
                     <Elements
                   stripe={stripePromise}

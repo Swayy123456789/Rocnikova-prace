@@ -12,7 +12,7 @@ const cartSlice = createSlice({
       addToCart: (state, action) => {
         const item = action.payload;
       
-        // Default quantity fallback
+        // defaultni pocet
         const quantity = item.quantity ?? 1;
       
         const existing = state.products.find(p => p.id === item.id);
