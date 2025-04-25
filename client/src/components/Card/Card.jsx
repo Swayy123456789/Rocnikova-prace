@@ -43,10 +43,11 @@ export default function MediaCard({ product }) {
       objectFit: "contain",    
     }}
   />
-
-
       </CardMedia>
-          <CardContent>
+
+
+
+          <CardContent className="flex flex-col items-center">
             <Typography gutterBottom variant="h5" component="div">
               {product.name}
             </Typography>
@@ -55,13 +56,12 @@ export default function MediaCard({ product }) {
               
             </Typography>
           </CardContent>
-          <CardActions>
+
+          <CardActions className="flex flex-col items-center !pb-4">
             {product.brand},
             {" " + product.material},
-            <button onClick={() => dispatch(addToCart(product))} className="mt-2 bg-blue-500 text-white !px-1 !py-1 rounded-lg">
-        Add to cart
-      </button>
           </CardActions>
+
         </Card>
       </Link>
     </>

@@ -13,6 +13,8 @@ import ProductUpdateForm from "./ProductUpdateForm";
 import ProductViewAdmin from "./ProductViewAdmin";
 import ProductListAdmin from "./ProductListAdmin";
 import Cart from "../components/Cart/Cart";
+import Completion from "./Completion/Completion";
+
 
 
 
@@ -33,6 +35,7 @@ export default function AppRoutes() {
                 <Route path="/products" element={<ProductList/>}/>
                 <Route path="/update-product/:id" element={<ProductUpdateForm/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/completion" element={<Completion/>}/>
             </Routes>
         </BrowserRouter>
     </>

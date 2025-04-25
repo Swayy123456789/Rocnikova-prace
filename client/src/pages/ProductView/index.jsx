@@ -13,6 +13,8 @@ export default function ProductView() {
   const [formData, setFormData] = useState();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPopup, setShowPopup] = useState(false);
+
 
   const load = async () => {
     const data = await getProductById(id);
@@ -27,7 +29,7 @@ export default function ProductView() {
     setFormData(e.target.value);
   };
 
-  const handleDelete = async (e) => {
+  /*const handleDelete = async (e) => {
     e.preventDefault();
     if (product.name === formData) {
       const data = await deleteProduct(id);
@@ -41,9 +43,12 @@ export default function ProductView() {
       setInfo("Wrong input");
     }
   };
+  */
 
   const handleAddToCart = () => {
     dispatch(addToCart({ ...product, id: crypto.randomUUID(), quantity: 1 }));
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2000);
   };
 
   useEffect(() => {
@@ -52,22 +57,37 @@ export default function ProductView() {
 
   if (isLoaded === null) {
     return (
+      <>
       <div className="min-h-screen flex items-center justify-center text-white">
         <p className="text-2xl font-bold">Product not found</p>
       </div>
+      </>
     );
   }
 
   if (!isLoaded) {
     return (
+      <>
       <div className="min-h-screen flex items-center justify-center text-white">
         <p>Product is loading...</p>
       </div>
+      </>
     );
   }
 
   return (
+
+    <div className="relative">
+      {showPopup && (
+        <div className="absolute top-2 right-2 bg-gray-400 text-white text-lg font-bold !px-3 !py-1 rounded shadow-lg">
+          Product has been added to cart!
+        </div>
+      )}
+      
+    
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br">
+      
+
       <div className="w-full max-w-5xl grid md:grid-cols-2 gap-10 items-center rounded-3xl !p-8 shadow-xl text-white transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
         
         {/* obrazek */}
@@ -80,11 +100,10 @@ export default function ProductView() {
         </div>
 
         {/* info */}
-        <div className="!space-y-4 h-[500px] flex flex-col justify-between">
-          <div>
+        <div className="h-[520px] flex flex-col justify-between">
+          <div className="!space-y-6">
             <h1 className="text-4xl font-bold">{product.name}</h1>
             <p className="text-sm text-gray-300">Product ID: {id}</p>
-
             <p><span className="font-semibold">Brand:</span> {product.brand}</p>
             <p><span className="font-semibold">Price:</span> ${product.price}</p>
             <p><span className="font-semibold">Type:</span> {product.type}</p>
@@ -101,13 +120,14 @@ export default function ProductView() {
 
           <Link
             to={"/products"}
-            className="inline-flex items-center gap-2 !mt-4 !px-4 !py-2 max-w-52 bg-gray-700 hover:bg-gray-600 transition-all duration-300 rounded-xl shadow text-white hover:translate-x-1 hover:shadow-lg"
+            className="inline-flex items-center gap-2 !mt-1 !px-4 !py-2 max-w-52 bg-gray-700 hover:bg-gray-600 transition-all duration-300 rounded-xl shadow text-white hover:translate-x-1 hover:shadow-lg"
           >
             <ArrowLeft size={18} />
-            <span>Back to Products</span>
+            <span>Back to products</span>
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

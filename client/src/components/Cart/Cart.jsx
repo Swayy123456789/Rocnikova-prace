@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, clearCart } from "../../store/cartSlice";
 import CheckoutForm from "./CheckoutForm";
@@ -6,6 +5,11 @@ import { useState, useEffect } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { createPaymentIntent, getConfig } from "../../models/Stripe";
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
 
 const Cart = () => {
   const [stripePromise, setStripePromise] = useState(null);
@@ -78,8 +82,32 @@ const Cart = () => {
               <div className="!mt-10 text-right text-2xl font-bold text-white">
                 Total: <span className="text-white">${totalPrice}</span>
               </div>
-              {clientSecret && stripePromise && (
-                <Elements
+              
+                
+                  <button
+                    onClick={() => dispatch(clearCart())}
+                    className="!mt-6 w-full bg-blue-500 text-white text-lg !font-semibold !py-3 rounded-xl hover:bg-blue-600 transition duration-400 shadow-md !my-10"
+                  >
+                    Clear Cart
+                  </button>
+
+        
+                 
+                  <div className="flex justify-between items-center !mt-6 w-full">
+                        <Link
+                          to="/products"
+                          className="flex items-center gap-2 bg-gray-600 hover:bg-gray-500 text-gray-100 font-bold text-sm !px-5 !py-2 rounded-lg transition duration-200"
+                        >
+                          <ArrowLeft size={16} />
+                    Continue browsing products
+                        </Link>
+
+                  </div>
+
+                
+                  <div className="flex items-center justify-center h-screen">
+                  {clientSecret && stripePromise && (
+                    <Elements
                   stripe={stripePromise}
                   options={{
                     clientSecret: clientSecret,
@@ -102,23 +130,14 @@ const Cart = () => {
                     },
                   }}
                 >
-                  <button
-                    onClick={() => dispatch(clearCart())}
-                    className="!mt-6 w-full bg-blue-500 text-white text-lg !font-semibold !py-3 rounded-xl hover:bg-blue-600 transition duration-400 shadow-md !my-10"
-                  >
-                    Clear Cart
-                  </button>
-
-
-                  {/*              <div className="flex items-center justify-center h-screen">
-                  <CheckoutForm />
+                    <CheckoutForm />
+                    </Elements>
+                    )}  
                   </div>
                   
-                  */}
-
-
-                </Elements>
-              )}    
+                  
+                
+                
             </>
           )}
         </div>
