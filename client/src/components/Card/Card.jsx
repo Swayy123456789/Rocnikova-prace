@@ -12,7 +12,8 @@ export default function MediaCard({ product }) {
     <>
       <Link to={`/product/${product._id}`}>
 
-        <Card sx={{  width: 300,             
+        <Card sx={{  
+      width: 300,             
       height: 380, 
       backgroundColor: "#cccccc",           
       display: "flex",

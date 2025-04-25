@@ -8,7 +8,7 @@ export default function CartPreview({ onClose }) {
   return (
     <>
     <div
-      className="absolute -right-39 !mt-2 !p-3 w-110 bg-gray-300 shadow-2xl rounded-2xl overflow-hidden border border-gray-300"
+      className="absolute z-50 -right-39 !mt-2 !p-3 w-110 bg-gray-300 shadow-2xl rounded-2xl overflow-hidden border border-gray-300"
       style={{ zIndex: 9999, top: '60px' }} // zajistime, ze dropdown bude nad kartičkami
     >
       <div className="!p-4">
