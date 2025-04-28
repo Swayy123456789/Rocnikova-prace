@@ -5,15 +5,15 @@ import { CirclePlus, Eye } from "lucide-react";
 export default function Admin() {
   return (
     <>
-      {/* main section */}
+      {/* hlavni sekce */}
       <section className="min-h-screen bg-gradient-to-br !px-6 !py-16 text-white">
         <div className="max-w-6xl !mx-auto text-center">
           <h1 className="text-5xl font-bold !mb-50">Admin panel</h1>
 
-          {/* admin action cards */}
+          {/* admin karty pro akci */}
           <div className="grid grid-cols-1 sm:grid-cols-2 !gap-10 place-items-center">
 
-            {/* add product */}
+            {/* presmerovani na pridani produktu */}
             <Link
               to="/add-product"
               className="w-full max-w-xs group !p-10 rounded-2xl border border-black transition-all duration-300 shadow-md hover:shadow-2xl flex flex-col items-center text-center"
@@ -25,7 +25,7 @@ export default function Admin() {
               </p>
             </Link>
 
-            {/* view products */}
+            {/* presmerovani na zobrazeni produktu */}
             <Link
               to="/admin-product-view"
               className="w-full max-w-xs group !p-8 rounded-2xl border border-black transition-all duration-300 shadow-md hover:shadow-2xl flex flex-col items-center text-center"

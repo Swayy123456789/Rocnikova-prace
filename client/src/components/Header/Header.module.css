@@ -68,7 +68,7 @@ li, a, button {
     color: rgb(222, 201, 82);
 }
 
-/* Košík - Malý náhled */
+/* maly prehled o tom, co je v kosiku */
 .cartWrapper {
     position: relative;
 }

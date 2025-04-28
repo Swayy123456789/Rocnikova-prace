@@ -37,7 +37,7 @@ export default function Contact() {
         <section className="!max-w-320 !px-6 !py-25 text-white !mx-auto !my-15">
           <div className="!grid !grid-cols-1 !md:grid-cols-2 !gap-8">
             
-            {/* Form */}
+            {/* formular */}
             <div className="!p-8 rounded-lg shadow-lg border border-white">
               <h3 className="text-xl font-bold text-white !mb-6 !py-4 text-center">
                 Have a question? Do not hesitate to contact us!
@@ -137,7 +137,7 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Contact Info */}
+            {/* veskere informace o kontaktovani */}
             <div className="!p-8 rounded-lg !shadow-lg border border-gray-400 !py-10 !my-20">
               <h3 className="text-center text-xl font-bold text-white !mb-6">
                 Contact Information

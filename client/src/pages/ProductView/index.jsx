@@ -11,7 +11,7 @@ export default function ProductView() {
   const [isLoaded, setLoaded] = useState(false);
   const [info, setInfo] = useState();
   const [formData, setFormData] = useState();
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const dispatch = useDispatch();
   const [showPopup, setShowPopup] = useState(false);
 
@@ -25,25 +25,11 @@ export default function ProductView() {
     }
   };
 
-  const handleChange = (e) => {
+  /*const handleChange = (e) => {
     setFormData(e.target.value);
   };
-
-  /*const handleDelete = async (e) => {
-    e.preventDefault();
-    if (product.name === formData) {
-      const data = await deleteProduct(id);
-      if (data.status === 200) {
-        alert("Product deleted successfully!");
-        navigate(`/`);
-      } else {
-        setInfo(data.message);
-      }
-    } else {
-      setInfo("Wrong input");
-    }
-  };
   */
+
 
   const handleAddToCart = () => {
     dispatch(addToCart({ ...product, id: crypto.randomUUID(), quantity: 1 }));

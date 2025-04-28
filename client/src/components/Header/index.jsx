@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import s from "./Header.module.css"; // Používáme tvé CSS pro Header
+import s from "./Header.module.css"; 
 import { Link } from "react-router-dom";
 import { FadeLeft } from "../../../utils/animation";
 import { motion } from "framer-motion";
 import CartPreview from "../../components/CartPreview/CartPreview";
-import { FaShoppingCart } from "react-icons/fa"; // Ikona košíku
+import { FaShoppingCart } from "react-icons/fa"; 
 
 export default function Header() {
   const [showCartPreview, setShowCartPreview] = useState(false);
@@ -14,7 +14,7 @@ export default function Header() {
     setShowCartPreview(prev => !prev);
   };
 
-  // Zavření košíku při kliknutí mimo
+  // zavre prehled kosiku pri kliknuti mimo
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (cartRef.current && !cartRef.current.contains(event.target)) {
@@ -33,7 +33,7 @@ export default function Header() {
     >
       <section className="container !mx-auto !max-w-255">
         <header>
-          <div className={s.outline}> {/* Používáme tvoje CSS třídy pro Header */}
+          <div className={s.outline}> {/* pro lepsi srozumitelnost pouzito AI, jinak rucne vytvoreny styl */}
             <Link to={"/"}>
               <img className={s.logo} src="../img/logo.png" alt="logo" />
             </Link>

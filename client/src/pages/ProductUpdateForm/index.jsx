@@ -5,7 +5,7 @@ import { createUpdate } from "../../models/Uploads";
 
 export default function ProductUpdateForm() {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);  // Ponechávám null, aby data nebyla předvyplněná
+  const [product, setProduct] = useState(null);  
   const [isLoaded, setLoaded] = useState(false);
   const [info, setInfo] = useState("");
   const [formData, setFormData] = useState({
@@ -20,7 +20,7 @@ export default function ProductUpdateForm() {
   });
   const navigate = useNavigate();
 
-  // Načítání produktu (abychom získali data, pokud je potřebujeme)
+  // zavolani funkce load pro nacteni produktu (abychom ziskali data, pokud je to pozadovano)
   const load = async () => {
     const data = await getProductById(id);
     if (data.status === 200) {
@@ -33,21 +33,21 @@ export default function ProductUpdateForm() {
 
 
   useEffect(() => {
-    load(); // Zavolání funkce na načtení dat
+    load(); // volani funkce pro nacitani dat
   }, []);
 
-  // Funkce pro změnu hodnoty vstupů
+  // funkce, ktera meni hodnoty vstupu
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  // Funkce pro změnu souboru obrázku
+  // funkce ktera meni soubor obrazku
   const handleImageChange = (e) => {
     setFormData({ ...formData, imgFile: e.target.files[0] });
   };
 
-  // Funkce pro odeslání formuláře
+  // funkce, ktera odesila vyplneny formular
   const submit = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();

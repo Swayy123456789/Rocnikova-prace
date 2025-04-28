@@ -31,9 +31,9 @@ export default function ProductListAdmin() {
   
   if (!isLoaded) {
     return (
-      <div className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">
+      <>
         <p className="min-h-screen flex items-center justify-center !my-auto bg-gradient-to-br text-white text-4xl font-bold">Loading...</p>
-      </div>
+        </>
     );
   }
   
